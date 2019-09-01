@@ -1,0 +1,13 @@
+@import '../../../theme/variables.scss';
+
+.title {
+    color: $azul-oscuro;
+    font-size: 35px;
+    margin-top: 15px;
+}
+
+.subtitle {
+    color: $negro;
+    font-family: $lato;
+    font-weight: lighter;
+}

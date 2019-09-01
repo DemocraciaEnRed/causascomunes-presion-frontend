@@ -1,0 +1,13 @@
+<slider>
+    <ng-template ngFor let-politician [ngForOf]="politiciansList">
+        <politician-card [project]="project" [politician]="politician"></politician-card>
+    </ng-template>
+</slider>
+
+<!--<div class="container">
+    <div class="row full-list-strip">
+        <div class="col-12">
+            <button type="button" class="btn btn-primary btn-aec btn-lg text-uppercase" [routerLink]="['/lista', project.slug]">Ver listado completo&emsp;<small><i class="fas fa-chevron-right"></i></small></button>
+        </div>
+    </div>
+</div>-->

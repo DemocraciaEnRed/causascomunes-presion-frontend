@@ -1,0 +1,43 @@
+<div class="bg-mosaico-blanco">
+<ng-template [ngIf]="highlightedProjectExists">
+
+    <div class="container">
+
+        <!-- Descripcion -->
+        <div class="row desc-strip">
+            <div class="col">
+                <div>
+                    <h1 class="desc-title">Les candidates<!--{{highlightedProject.name || "..."}}--></h1>
+                    <div class="desc-text" [innerHtml]="projectDescription"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <politician-slider [politiciansList]="politiciansList" [project]="highlightedProject"></politician-slider>
+
+    <div class="mt-5 w-100 separador"></div>
+</ng-template>
+</div>
+
+<div class="w-100 bg-mosaico-blanco">
+    <div class="container">
+        <!-- Proyectos -->
+        <div class="row">
+            <div class="col py-4">
+                <h2 class="title">Las Causas</h2>
+                <h4 class="subtitle">Ingresa para empezar a activar la causa</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-12 mb-4">
+                <ng-template ngFor let-p [ngForOf]="projectList">
+                    <project-card [project]="p"></project-card>
+                </ng-template>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Contador -->
+<tally [ammount]="tally"></tally>

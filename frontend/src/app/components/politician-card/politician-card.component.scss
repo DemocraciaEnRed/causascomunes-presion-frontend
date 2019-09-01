@@ -1,0 +1,123 @@
+@import '../../../theme/variables.scss';
+.politician-card {
+    height: calc(100% - 28px);
+    border-radius: 20px;
+    min-height: 500px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.07), 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.card-image-container {
+    min-width: 100%;
+    min-height: 250px;
+    background-color: #cdcdcd;
+    /* mismo b-radius que .politician-card */
+    border-radius: 20px 20px 0px 0px; 
+}
+
+.img-card-top {
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+.postura {
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* estos nombre vienen de {{stance}} en el html */
+.AFavor .postura {
+    color: $aFavor;
+    background-color: $aFavor-light;
+}
+
+.EnContra .postura {
+    color: $enContra;
+    background-color: $enContra-light;
+}
+
+.NoConfirmado .postura {
+    color: $noConfirmado;
+    background-color: $noConfirmado-light;
+}
+
+.SeAbstiene .postura {
+    color: $seAbstiene;
+    background-color: $seAbstiene-light;
+}
+
+.title {
+    display: block;
+    text-align: left;
+    font-family: $lato;  
+    font-size: 18px;
+    font-weight: 600;
+    color: #474747;
+    font-weight: bold;
+}
+
+.subtitle {
+    display: block;
+    text-align: left;
+    font-family: $lato;
+    font-size: 14px;
+    color: #696969;
+}
+
+.contact-button {
+    width: 100%;
+    background: transparent;
+    font-family: $lato;
+    color: $azul-oscuro;
+    margin-top: 5px;
+    border-radius: 30px;
+    padding: 0.2rem 0;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    border: solid 1px $azul-oscuro;
+    font-weight: 500;
+}
+
+.contact-button:hover {
+    background-color: $verde;
+    color: $blanco;
+    cursor: pointer;
+}
+
+.close {
+    margin-top: -20px;
+    margin-right: -15px;
+}
+
+.modal-content {
+    border-radius: 0px;
+    padding: 15px;
+    color: $gris-texto;
+}
+
+.example-message {
+    border: 1px solid #666666;
+    background: #f3f3f3;
+    font-size: 20px;
+    font-family: $lato;
+    font-style: italic;
+}
+
+.card-body {
+    height: calc(100% - 250px);
+}
+
+.button-container {
+    button:first-child {
+        margin-top: 1.25rem;
+    }
+}
+
+.modal-footer {
+    padding-bottom: 0px !important;
+}
+
+.btn-center {
+    margin: auto;
+}

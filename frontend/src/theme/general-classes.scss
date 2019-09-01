@@ -1,0 +1,286 @@
+body {
+    font-family: $lato;
+    background-color: #fdfdfd;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $basker;
+    font-weight: bold;
+    color: $azul-oscuro;
+}
+
+.bg-verde {
+    background-color: $verde;
+}
+
+.bg-violeta {
+    background-color: $violeta;
+}
+
+.bg-gris-oscuro {
+    background-color: $gris-oscuro;
+}
+
+.bg-thumbnail {
+    background-color: $gris-thumbnail;
+}
+
+.btn-aec {
+    color: $blanco;
+    border-radius: 30px !important;
+    background-color: #2159a3 !important;
+    border: 0px !important;
+    padding: 7px 18px 7px 18px !important;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.follow-btn {
+    color: $blanco;
+    border-radius: 0px;
+    border: solid 2px $blanco;
+    background-color: transparent;
+    font-size: 28px;
+    padding: 7px 12px 7px 12px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    min-width: 58px;
+    display: inline-block;
+    text-align: center;
+    &:hover,
+     :focus {
+        color: $verde;
+        background-color: $blanco;
+    }
+}
+
+.navbar-light {
+    background-color: $gris !important;
+    font-family: $lato !important;
+}
+
+.navbar-dark {
+    background-color: $negro !important;
+    color: $blanco !important;
+}
+
+.redes {
+    position: absolute;
+    left: 45%;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.red-img {
+    width: 41px;
+    margin: 5px;
+}
+
+.red-img:hover {
+    width: 43px;
+}
+
+.red-img.bigger {
+    width: 47.5px;
+    margin-left: -0.4px;
+}
+
+.red-img.bigger:hover {
+    width: 49px;
+}
+
+.red-img.mail {
+    border: solid 1px #FFF;
+    border-radius: 50px;
+}
+
+.modal-content {
+    border: 0px;
+    border-radius: 0px;
+    background-color: $gris;
+    font-family: $lato;
+}
+
+.modal-header,
+.modal-footer {
+    border: 0px;
+    border-radius: 0px;
+}
+
+.modal-btn {
+    border-radius: 0px !important;
+    background-color: black;
+    border: 0px;
+    font-family: $lato;
+    margin: 5px;
+}
+
+.modal-btn:hover {
+    background-color: #464646;
+}
+
+.info-strip {
+    color: $gris-texto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.info-title {
+    font-family: $basker;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.info-text {
+    font-family: $lato;
+    color: $negro;
+}
+
+.follow-strip {
+    background-color: $verde;
+    color: $blanco;
+    .col {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        &.newsletter {
+            @media (min-width: 768px) {
+                border-left: solid 2px $blanco;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+    }
+}
+
+.follow-title {
+    font-weight: bold;
+}
+
+.news-container {
+    padding: 0;
+    position: relative;
+}
+
+.news-input {
+    background-color: $blanco;
+    border: solid 2px $azul-oscuro;
+    @include border-radius(20px);
+    margin: 0;
+    font-size: 1.1em;
+    color: $negro !important;
+    padding: 10px 130px 10px 15px;
+    width: 100%;
+    &::placeholder {
+        color: $blanco;
+    }
+    /*&:focus {
+        outline: none;
+        padding: 13px 130px 13px 13px;
+    }*/
+}
+
+.btn-white {
+    background-color: $blanco;
+    color: $verde;
+}
+
+.btn-news {
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    width: 100px;
+    border-radius: 0;
+    font-weight: bold;
+    color: $azul-oscuro;
+}
+
+.final-strip-img {
+    margin: auto;
+    max-width: 160px;
+}
+
+slider politician-card .politician-card {
+    min-width: 250px;
+    max-width: 250px;
+    margin: 8px 8px 20px;
+}
+
+slider politician-card:last-child .politician-card {
+    margin-right: 15px;
+    @media (min-width: 768px) {
+        margin-right: 80px;
+    }
+    @media (min-width: 992px) {
+        margin-right: 100px;
+    }
+}
+
+slider .video-container:last-child iframe {
+    margin-right: 15px;
+    @media (min-width: 768px) {
+        margin-right: 80px;
+    }
+    @media (min-width: 992px) {
+        margin-right: 100px;
+    }
+}
+
+.separador {
+    width: 100vw;
+    border-top: solid 9px $violeta;
+    border-bottom: solid 7px $verde;
+}
+
+footer {
+    h5 {
+        text-transform: uppercase;
+        font-family: $lato;
+        font-weight: normal;
+        font-size: .85em;
+        color: $gris-texto-claro;
+    }
+    a,
+    span {
+        text-transform: uppercase;
+        font-weight: 600;
+        display: block;
+        margin: 10px 0;
+        color: $gris-texto;
+        cursor: pointer;
+        &:hover,
+        &:focus {
+            color: $negro;
+            outline: none;
+        }
+    }
+}
+
+.modal-lg {
+    @media (min-width: 768px) {
+        max-width: 720px;
+    }
+    @media (min-width: 992px) {
+        max-width: 960px;
+    }
+    @media (min-width: 1200px) {
+        max-width: 1140px;
+    }
+}
+
+
+
+/*################# NUEVAS ############*/
+.bg-azul-claro{
+  background-color: $azul-claro;
+}
+.bg-mosaico-blanco{  
+    background-image: url(../assets/images/mosaico-iconos-causas-blanco.svg);
+    background-size: cover;
+}

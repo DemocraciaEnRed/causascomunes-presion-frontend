@@ -1,0 +1,69 @@
+@import '../../../theme/variables.scss';
+
+header {
+    background-color: $azul-oscuro;
+    background-image: url(../../../assets/images/banner-home.png);
+    background-size: cover;
+    width: 100%;
+    min-height: 350px;
+}
+
+.nav {
+    padding-top: 10px;
+    width: 100%;
+    display:inline-block;
+    text-align: center;
+    color: $blanco;
+    font-family: $lato;
+}
+
+.nav-aec-link, .nav-aec-link:visited {
+    color: $blanco;
+}
+
+.nav-aec-link:hover {
+    cursor: pointer;
+    text-decoration: underline !important;
+}
+
+.logo-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 45px;
+    margin-top: 50px;
+}
+
+.title {
+    width: 100%;
+    margin-top: 55px;
+    text-align: center;
+    color: $blanco;
+    font-family: $lato;
+    font-size: 60px;
+}
+
+.subtitle {
+    width: 100%;
+    margin-top: -30px;
+    text-align: center;
+    color: $blanco;
+    font-family: $lato;
+    font-size: 17px;
+}
+
+.modal-content {
+    border-radius: 0px;
+    padding: 15px;
+    color: $gris-texto;
+}
+
+.q-title {
+    font-family: $lato;
+    font-size: 20px;
+}
+
+.question {
+    font-family: $lato;
+    margin-bottom: 15px;
+}
