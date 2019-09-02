@@ -33,14 +33,15 @@ export class ProjectCardComponent implements OnInit {
         this.projectDescription = this.sanitizeHtml(this.project.short_text);
       
         let bgCol='';
-        switch(this.project.name.toLowerCase()){
-          case 'proyyyy':
+        //this.project.slug es la url interna
+        switch(this.project.slug.toLowerCase()){
+          case 'genero':
           bgCol = 'rgb(119, 73, 151)';
           break;
           case 'ambiente':
           bgCol = '#2fac66';
           break;
-          case 'assddd':
+          case 'trabajo':
           bgCol = '#e71869';
           break;
         }
