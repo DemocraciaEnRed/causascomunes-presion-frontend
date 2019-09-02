@@ -27,7 +27,7 @@ export class ProjectCardComponent implements OnInit {
 
     public ngOnInit(): void {
         const backgroundAux = 'url(' +
-            environment.imgBase + this.project.dir.replace(/\\/g, '/') + '/grid-' + this.project.image + ') no-repeat';
+            environment.imgBase + this.project.dir.replace(/\\/g, '/') + '/' + this.project.image + ')';
         this.backgroundImage = this.sanitizeStyle(backgroundAux);
         this.projectDescription = this.sanitizeHtml(this.project.short_text);
     }

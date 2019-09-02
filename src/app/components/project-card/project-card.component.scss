@@ -5,16 +5,18 @@
     margin-top: 5px;
     box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.07), 0 10px 15px 0 rgba(0, 0, 0, 0.1);
     border-radius: 0px 20px 20px 0px;
+    min-height: 250px;
 
-    .col-md-6 {
+    .col-img, .col-txt {
         @media (min-width: 768px) {
             height: 300px !important;
         }
     }
-
+  
     .col-img {
         padding: 0px !important;
-        background-size: cover !important;
+        background-size: 150px;
+        background-repeat: no-repeat;
         cursor: pointer;
         border-radius: 20px 0px 0px 20px;
         background-position: center center;
@@ -34,5 +36,7 @@
 
     .project-description {
         height: calc(100% - 34px);
+        /* En src/theme/general-classes.scss están los estilos de los títulos (línea 16) */
     }
+  
 }
