@@ -55,10 +55,8 @@ h6 {
 .follow-btn {
     color: $blanco;
     border-radius: 0px;
-    border: solid 2px $blanco;
     background-color: transparent;
     font-size: 28px;
-    padding: 7px 12px 7px 12px;
     cursor: pointer;
     margin-bottom: 10px;
     min-width: 58px;
@@ -70,6 +68,7 @@ h6 {
         background-color: $blanco;
     }
 }
+.follow-btn:hover { background-color: transparent; }
 
 .navbar-light {
     background-color: $gris !important;
@@ -175,6 +174,11 @@ a:hover {
     font-weight: bold;
 }
 
+.blank-line{
+  background-color: $blanco;
+  height: 3px;
+}
+
 .news-container {
     padding: 0;
     position: relative;
@@ -189,10 +193,10 @@ a:hover {
     color: $negro !important;
     padding: 10px 130px 10px 15px;
     width: 100%;
-    &::placeholder {
+    /*&::placeholder {
         color: $blanco;
     }
-    /*&:focus {
+    &:focus {
         outline: none;
         padding: 13px 130px 13px 13px;
     }*/
@@ -252,24 +256,23 @@ slider .video-container:last-child iframe {
 
 footer {
     h5 {
-        text-transform: uppercase;
         font-family: $lato;
-        font-weight: normal;
-        font-size: .85em;
-        color: $gris-texto-claro;
+        font-weight: 500;
+        font-size: 16px;
+        color: $gris-oscuro;
     }
     a,
     span {
-        text-transform: uppercase;
-        font-weight: 600;
+        font-weight: normal;
+        font-size: 14px;
         display: block;
         margin: 10px 0;
-        color: $gris-texto;
+        color: #2a4b8c;
         cursor: pointer;
+        text-decoration: underline;
         &:hover,
         &:focus {
-            color: $negro;
-            outline: none;
+            color: #116fbf;
         }
     }
 }

@@ -45,6 +45,7 @@ $basker: $barlow;
 $lato: $barlow;
 $azul-claro: #e4eefa;
 $azul-oscuro: #2a4b8c;
+$gris-oscuro: #696969;
 
 @mixin border-radius($radius: 5px) {
   -webkit-border-radius: $radius;

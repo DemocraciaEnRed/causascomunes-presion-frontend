@@ -7,10 +7,10 @@
 
     <div class="w-100 info-strip bg-mosaico-blanco">
         <!-- Info -->
-        <div class="container">
+        <div class="container py-md-5">
             <div class="row">
                 <div class="col">
-                    <h3 class="info-title mb-4">¿Qué es Causas Comunes?</h3>
+                    <h3 class="info-title mb-4 text-center text-md-left">¿Qué es Causas Comunes?</h3>
                     <p class="info-text">
                         Somos ecologistas, feministas, personas preocupadas por la precarización laboral y la ausencia de políticas públicas que nos garanticen trabajo y vivienda digna. Venimos construyendo alternativas, movilizándonos, encontrándonos en las calles, en las redes, desde diversos espacios y territorios. Tenemos ideas, tenemos propuestas y buscamos que tengan impacto real. 
                         <br>
@@ -24,27 +24,24 @@
     </div>
 
     <div class="w-100 follow-strip bg-azul-claro">
-        <div class="container">
-            <div class="row">
-                <div class="col col-12 col-md-7">
+        <div class="container py-2 py-md-5">
+            <div class="row px-2">
+                <div class="col col-12 col-md-6 col-lg-7">
                     <h4 class="follow-title mb-3">Nuestras redes</h4>
-                    <a href="https://twitter.com/causas_comunes" target="_blank" class="follow-btn"><i
-              class="fab fa-twitter"></i></a>
-                    <a href="https://www.facebook.com/Causas-Comunes-449280685874685/" target="_blank" class="follow-btn f-btn"><i
-              class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/causascomunes/" target="_blank" class="follow-btn"><i
-              class="fab fa-instagram"></i></a>
-                    <a href="mailto:causascomunesx@gmail.com" target="_blank" class="follow-btn"><i
-              class="far fa-envelope"></i></a>
+                    <a href="https://www.instagram.com/causascomunes/" target="_blank" class="follow-btn"><img class="mr-1" src="../assets/images/social_instagram_icon.png"></a>
+                    <a href="https://www.facebook.com/Causas-Comunes-449280685874685/" target="_blank" class="follow-btn f-btn"><img class="mx-1" src="../assets/images/social_facebook_icon.png"></a>
+                    <a href="https://twitter.com/causas_comunes" target="_blank" class="follow-btn"><img class="mx-1" src="../assets/images/social_twitter_icon.png"></a>
+                    <a href="mailto:causascomunesx@gmail.com" target="_blank" class="follow-btn"><img class="mx-1" src="../assets/images/social_mail_icon.svg" height="46px"></a>
                 </div>
-
-                <div class="col col-12 col-md-5 newsletter">
+                <div class="d-md-none col-12 blank-line">
+                </div>
+                <div class="col col-12 col-md-6 col-lg-5 newsletter">
                     <h4 class="follow-title mb-3">Nuestro newsletter</h4>
                     <form ngNoForm [formGroup]="formGroup" [hidden]="submitted">
                         <div class="news-container">
-                            <input type="text" placeholder="Email" formControlName="email" class="news-input" />
+                            <input type="text" placeholder="Ingresá tu email." formControlName="email" class="news-input" />
                             <input type="hidden" formControlName="project" name="project" id="newsletter_project" />
-                            <button type="button" class="btn btn-white btn-news" (click)="submitNewsletter()">Enviar</button>
+                            <button type="button" class="btn btn-white btn-news" (click)="submitNewsletter()">Suscribirme</button>
                         </div>
                         <span class="error">{{newsletterMessage}}</span>
                     </form>
@@ -56,7 +53,7 @@
 
     <div class="bg-mosaico-blanco">
       <footer class="container pt-4">
-          <div class="row">
+          <div class="row px-2">
               <div class="d-none d-md-block col-md-3 mb-4 h-100 align-self-center">
                   <img class="final-strip-img" src="../../../assets/images/logo-footer.png">
               </div>
@@ -72,8 +69,8 @@
                   <a href="https://www.facebook.com/Causas-Comunes-449280685874685/" target="_blank">Facebook</a>
                   <a href="https://www.instagram.com/causascomunes/" target="_blank">Instagram</a>
               </div>
-              <div class="d-md-none col-12">
-                  <img class="d-block mx-auto" src="../../../assets/images/logo.png">
+              <div class="d-md-none col-12 mb-5 mt-3">
+                  <img class="d-block mx-auto" src="../../../assets/images/logo-footer.png" height="54px">
               </div>
           </div>
       </footer>
