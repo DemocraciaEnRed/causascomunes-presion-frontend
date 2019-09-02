@@ -13,6 +13,7 @@ export class ProjectCardComponent implements OnInit {
     @Input() project: Project;
     public backgroundImage: string;
     public projectDescription: SafeHtml;
+    public bgColor: string;
 
     public constructor(public sanitizer: DomSanitizer) {
     }
