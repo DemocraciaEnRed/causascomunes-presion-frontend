@@ -30,6 +30,20 @@ export class ProjectCardComponent implements OnInit {
             environment.imgBase + this.project.dir.replace(/\\/g, '/') + '/' + this.project.image + ')';
         this.backgroundImage = this.sanitizeStyle(backgroundAux);
         this.projectDescription = this.sanitizeHtml(this.project.short_text);
+      
+        let bgCol='';
+        switch(this.project.name.toLowerCase()){
+          case 'proyyyy':
+          bgCol = 'rgb(119, 73, 151)';
+          break;
+          case 'ambiente':
+          bgCol = '#2fac66';
+          break;
+          case 'assddd':
+          bgCol = '#e71869';
+          break;
+        }
+        this.bgColor = bgCol;
     }
 
 }
