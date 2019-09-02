@@ -1,7 +1,7 @@
 const packageVars = require('../../package.json');
 
 export const environment = {
-  api: 'https://api.presion.causascomunes.org/',
-  imgBase: 'https://api.presion.causascomunes.org/',
+  api: 'https://backend.activa.causascomunes.org/',
+  imgBase: 'https://backend.activa.causascomunes.org/',
   production: true
 };
