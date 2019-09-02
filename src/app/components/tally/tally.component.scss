@@ -11,9 +11,16 @@ h4 {
   }
   
   .megafono-derecha, .megafono-izquierda{
-    height: 50px;
+    height: 70px;
+    margin-right: auto;
+    @media (min-width: $width-medium) {
+      height: 50px;
+    }
     @media (min-width: $width-large) {
       height: 80px;
+    }
+    @media (max-width: $width-medium) {
+      margin-left: auto !important;
     }
   }
 }
