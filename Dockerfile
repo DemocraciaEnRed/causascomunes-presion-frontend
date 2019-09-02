@@ -19,7 +19,7 @@ RUN yarn
 
 COPY . ./
 
-RUN yarn build --env=prod
+RUN yarn build
 
 # TODO ver como parametrizar el prod-build cuando salgamos a prod.
 
