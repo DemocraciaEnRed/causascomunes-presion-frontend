@@ -1,24 +1,25 @@
-<div class="container">
+<div class="bg-mosaico-blanco pb-5">
+  <div class="container">
 
-    <!-- Descripcion -->
-    <div class="row desc-strip">
-        <div class="col">
-            <div>
-                <h1 class="desc-title">{{currentProject.name || "..."}}</h1>
-                <div class="desc-text" [innerHtml]="projectDescription"></div>
-            </div>
-        </div>
-    </div>
+      <!-- Descripcion -->
+      <div class="row desc-strip">
+          <div class="col">
+              <div>
+                  <h1 class="desc-title">{{currentProject.name || "..."}}</h1>
+                  <div class="desc-text" [innerHtml]="projectDescription"></div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Politicxs -->
+  <politician-slider [politiciansList]="politiciansListSlider" [project]="currentProject"></politician-slider>
 </div>
 
-<!-- Politicxs -->
-<politician-slider [politiciansList]="politiciansListSlider" [project]="currentProject"></politician-slider>
+<div [hidden]="currentProject.show_tally == 0" class="w-100 separador"></div>
 
-<div [hidden]="currentProject.show_tally == 0" class="mt-5 w-100 separador"></div>
-
-<div class="w-100 bg-gris-oscuro py-5" [hidden]="currentProject.show_tally == 0">
-    <div class="container">
-        <!-- Conteo -->
+<div class="w-100 bg-blanco change-org">  
+    <div class="container py-md-5">
         <div class="row">
             <div class="col">
                 <h3 class="title mb-4 text-center text-md-left">Lo que proponemos</h3>
@@ -35,9 +36,20 @@
 <!-- Contador -->
 <tally [ammount]="currentProject.tally"></tally>
 
-<div class="w-100 bg-gris-oscuro py-2" [hidden]="(currentProject.show_videos == 0 || currentProject.videos.length < 1) && currentProject.show_text == 0">
+<div class="w-100 bg-mosaico-blanco py-2" [hidden]="(currentProject.show_videos == 0 || currentProject.videos.length < 1) && currentProject.show_text == 0">
     <!-- Videos -->
     <video-slider [hidden]="(currentProject.show_videos == 0 || currentProject.videos.length < 1)" [project]="currentProject"></video-slider>
     <!-- Articulo -->
     <article [hidden]="currentProject.show_text == 0" [article]="currentProject.text" [image]="currentProject.image" [dir]="currentProject.dir"></article>
+</div>
+
+<div class="w-100 bg-azul-claro py-5" [hidden]="currentProject.show_tally == 0">
+    <div class="container">
+        <!-- Conteo -->
+        <div class="row">
+            <div class="col col-12">
+                <stats [project]="currentProject" [requestFullList]="true" [politiciansList]="null"></stats>
+            </div>
+        </div>
+    </div>
 </div>
