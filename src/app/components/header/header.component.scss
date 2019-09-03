@@ -1,11 +1,12 @@
 @import '../../../theme/variables.scss';
 
 header {
+    width: 100%;
     background-color: $azul-oscuro;
     background-image: url(../../../assets/images/banner-home.png);
+    background-position-x: center;
     background-size: cover;
-    width: 100%;
-    min-height: 350px;
+    height: 300px;
 }
 
 .nav {
@@ -15,6 +16,8 @@ header {
     text-align: center;
     color: $blanco;
     font-family: $lato;
+    font-size: 20px;
+    font-weight: normal;
 }
 
 .nav-aec-link, .nav-aec-link:visited {
@@ -41,6 +44,7 @@ header {
     color: $blanco;
     font-family: $lato;
     font-size: 60px;
+    font-weight: 600;
 }
 
 .subtitle {
@@ -49,7 +53,8 @@ header {
     text-align: center;
     color: $blanco;
     font-family: $lato;
-    font-size: 17px;
+    font-size: 22px;
+    font-weight: normal;
 }
 
 .modal-content {

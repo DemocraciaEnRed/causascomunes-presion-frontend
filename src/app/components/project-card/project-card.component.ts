@@ -13,7 +13,9 @@ export class ProjectCardComponent implements OnInit {
     @Input() project: Project;
     public backgroundImage: string;
     public projectDescription: SafeHtml;
+    //agregados por nosotres
     public bgColor: string;
+    public causa: string;
 
     public constructor(public sanitizer: DomSanitizer) {
     }
@@ -33,19 +35,24 @@ export class ProjectCardComponent implements OnInit {
         this.projectDescription = this.sanitizeHtml(this.project.short_text);
       
         let bgCol='';
+        let causa='';
         //this.project.slug es la url interna
         switch(this.project.slug.toLowerCase()){
           case 'genero':
           bgCol = 'rgb(119, 73, 151)';
+          causa = 'Género';
           break;
           case 'ambiente':
           bgCol = '#2fac66';
+          causa = 'Ambiente';
           break;
           case 'trabajo':
           bgCol = '#e71869';
+          causa = 'Trabajo';
           break;
         }
         this.bgColor = bgCol;
+        this.causa = causa;
     }
 
 }

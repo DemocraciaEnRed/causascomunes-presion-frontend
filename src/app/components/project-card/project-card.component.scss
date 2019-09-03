@@ -28,14 +28,17 @@
         }
         .project-title {
             position: relative;
-            text-align: center;
+            text-align: left;
             font-family: $basker;
             color: $blanco;
             font-size: 40px;
             font-weight: bold;
-            top: 20px;
+            top: 18px;
+            left: 100px;
             @media (min-width: $width-medium) {
                 top: 180px;
+                text-align: center;
+                left: inherit;
             }
         }
     }
