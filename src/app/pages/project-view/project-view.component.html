@@ -20,9 +20,14 @@
     <div class="container">
         <!-- Conteo -->
         <div class="row">
-            <div class="col col-12">
-                <stats [project]="currentProject" [requestFullList]="true" [politiciansList]="null"></stats>
+            <div class="col">
+                <h3 class="title mb-4 text-center text-md-left">Lo que proponemos</h3>
+                <p class="text"></p>
             </div>
+        </div>
+        <propuesta-slider [propuestas]="propuestas"></propuesta-slider>
+        <div class="row text-right">
+          <button class="btn btn-change mt-4">¡Firmá acá!</button>
         </div>
     </div>
 </div>

@@ -18,6 +18,8 @@ export class ProjectViewComponent implements OnInit {
     public projectDescription: SafeHtml;
     public politiciansList = new Array<Politician>();
     public politiciansListSlider = new Array<Politician>();
+  
+    public propuestas: Array<Array<String>>;
 
     public sanitizeHtml(html: string): any {
         return this.sanitizer.bypassSecurityTrustHtml(html);
@@ -68,6 +70,29 @@ export class ProjectViewComponent implements OnInit {
                         });
                     const element = document.querySelector('#activa');
                     element.scrollIntoView();
+            
+                    switch(p.slug.toLowerCase()){
+                      case 'genero':
+                        this.propuestas = [
+                          ['Plazo mínimo', 'se extiende de dos a tres años el plazo mínimo de un contrato de alquiler.'], 
+                          ['Actualización del precio', 'establece que los aumentos sean anuales (no semestrales) con un índice de actualización objetivo.'], 
+                          ['Registro de contratos', 'el locador tiene la obligación de declarar el contrato ante el registro de la propiedad inmueble, para “blanquear” los contratos.'], 
+                          ['Depósito', 'reduce el depósito en garantía a un mes de alquiler, a devolverse en el momento de restitución del inmueble y con el monto actualizado al valor del último mes de alquiler.'], 
+                          ['Impuestos y expensas extraordinarias', 'el inquilino no tendrá a su cargo el pago de las expensas comunes extraordinarias'], 
+                          ['Renovación del contrato', 'se obliga a acordar las condiciones de la renovación con tres meses del fin del contrato.'], 
+                          ['Arreglos', 'el proyecto establece de qué forma y en qué plazos deben las partes ante un problema que demande reparaciones en el inmueble.'], 
+                          ['Resolución anticipada', 'se elimina el plazo mínimo de seis meses para rescindir el contrato, se puede rescindir en cualquier momento (pagando una multa)'], 
+                          ['Domicilio electrónico', 'las partes deben fijar un domicilio electrónico (mail) en el contrato de alquiler, para que todas las comunicaciones por ese medio sean válidas y vinculantes.'], 
+                          ['Pagarés', 'el proyecto prohíbe a los propietarios exigir la firma de pagarés a los inquilinos.']
+                        ];
+                        break;
+                      case 'ambiente':
+                        this.propuestas = [
+                          ['2323','sdddd'],
+                          ['h555555gf','y23ytr']
+                        ];
+                        break;
+                    }
                 });
         });
     }

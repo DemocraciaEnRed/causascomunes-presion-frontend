@@ -1,0 +1,16 @@
+<div class="row">
+<ng-template ngFor let-propuesta [ngForOf]="propuestas">
+  <div class="propuesta col-6 mb-4">
+    <h1>{{propuesta[0]}}</h1>
+    <span>{{propuesta[1]}}</span>
+  </div>
+</ng-template>
+</div>
+
+<!--<div class="container">
+    <div class="row full-list-strip">
+        <div class="col-12">
+            <button type="button" class="btn btn-primary btn-aec btn-lg text-uppercase" [routerLink]="['/lista', project.slug]">Ver listado completo&emsp;<small><i class="fas fa-chevron-right"></i></small></button>
+        </div>
+    </div>
+</div>-->
