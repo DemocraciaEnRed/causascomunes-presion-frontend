@@ -35,7 +35,7 @@ export class ProjectViewComponent implements OnInit {
                 .getById(params['params']['id'])
                 .then(p => {
                     this.currentProject = p;
-                    const text = 'header {background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(' +
+                    /*const text = 'header {background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(' +
                         environment.imgBase + p.c_dir.replace(/\\/g, '/') + '/cover-' + p.cover_image +
                         '); background-size: cover;background-color: #' + p.secondary_color +
                         '!important;}.contact-button {border-color: #' + p.primary_color + '!important;color: #' +
@@ -57,7 +57,7 @@ export class ProjectViewComponent implements OnInit {
                     if ($('#project-styles').length < 1) {
                         $('style').after('<style id=\'project-styles\'></style>');
                         $('#project-styles').html(text).data('project', p.name);
-                    }
+                    }*/
                     $('#newsletter_project').val(p.name).trigger('input').trigger('change');
                     this.projectDescription = this.sanitizeHtml(p.slider_text);
                     this.politicianService
