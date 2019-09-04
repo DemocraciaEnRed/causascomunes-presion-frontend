@@ -95,9 +95,15 @@
 }
 
 .modal-content {
-    border-radius: 0px;
+    border-radius: 20px;
     padding: 15px;
-    color: $gris-texto;
+    color: $gris-oscuro;
+    border: solid 1px #696969;
+    font-size: 14px;
+    @media (min-width: $width-medium) {
+      font-size: 16px;
+    }
+    font-weight: 300;
 }
 
 .example-message {
