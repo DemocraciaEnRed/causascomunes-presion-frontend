@@ -8,3 +8,30 @@
     font-family: $lato;
     margin-top: -20px;
 }
+
+.change-org{
+  
+  .flyer{
+    max-height: 500px;
+  }
+
+  .title {
+      font-size: 2em;
+      font-weight: bold;
+  }
+
+  .text {
+      color: $negro;
+  }
+  
+  .btn-change {
+    background: #ec2c22;
+    color: $blanco;
+    font-weight: bold;
+    margin: 0 auto;
+    padding: 13px 60px;
+    font-size: 20px;
+    border-radius: 30px;
+  }
+  
+}

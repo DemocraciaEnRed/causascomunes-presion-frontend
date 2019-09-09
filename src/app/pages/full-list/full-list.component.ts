@@ -36,7 +36,7 @@ export class FullListComponent {
                 .getById(params['params']['id'])
                 .then(p => {
                     this.project = p;
-                    const text = 'header {background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(' +
+                    /*const text = 'header {background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(' +
                     environment.imgBase + p.c_dir.replace(/\\/g, '/') + '/cover-' + p.cover_image +
                     '); background-size: cover;background-color: #' + p.secondary_color +
                     '!important;}.contact-button {border-color: #' + p.primary_color + '!important;color: #' +
@@ -45,7 +45,7 @@ export class FullListComponent {
                     '!important;}.btn-primary.btn-aec {background-color: #' + p.primary_color +
                     '!important;}.separador {border-top: solid 9px #' + p.secondary_color + '!important;border-bottom: solid 7px #' +
                     p.primary_color + '!important;}.underline:after {background: #' + p.secondary_color +
-                    '!important;}.bg-verde {background-color: #' + p.primary_color + '!important;}.bg-violeta {background-color: #' +
+                    '!important;}.bg-verde {background-color: #' +  + '!important;}.bg-violeta {background-color: #' +
                     p.secondary_color + '!important;}.follow-btn:hover,.follor-btn:focus {color: #' + p.primary_color +
                     '!important;}.follow-strip {background-color: #' + p.primary_color + '!important;}.news-input {background-color: #' +
                     p.primary_color + '!important;}.btn-white {color: #' + p.primary_color + '!important;}';
@@ -55,7 +55,7 @@ export class FullListComponent {
                     if ($('#project-styles').length < 1) {
                         $('style').after('<style id=\'project-styles\'></style>');
                         $('#project-styles').html(text).data('project', p.name);
-                    }
+                    }*/
                     $('#newsletter_project').val(p.name).trigger('input').trigger('change');
                     this.getPolitics();
                     this.setOptions();

@@ -22,11 +22,14 @@ header {
 
 .nav-aec-link, .nav-aec-link:visited {
     color: $blanco;
+    border-bottom: 4px solid transparent;
+    padding-bottom: 10px;
 }
 
 .nav-aec-link:hover {
     cursor: pointer;
-    text-decoration: underline !important;
+    text-decoration: none!important;
+    border-bottom: 4px solid $blanco;
 }
 
 .logo-img {
@@ -43,7 +46,10 @@ header {
     text-align: center;
     color: $blanco;
     font-family: $lato;
-    font-size: 60px;
+    font-size: 30px;
+    @media (min-width: $width-medium) {
+      font-size: 60px;
+    }
     font-weight: 600;
 }
 
@@ -53,19 +59,28 @@ header {
     text-align: center;
     color: $blanco;
     font-family: $lato;
-    font-size: 22px;
+    font-size: 14px;
+    @media (min-width: $width-medium) {
+      font-size: 22px;
+    }
     font-weight: normal;
 }
 
 .modal-content {
-    border-radius: 0px;
+    border-radius: 20px;
     padding: 15px;
-    color: $gris-texto;
+    color: $gris-oscuro;
+    border: solid 1px #696969;
+    font-size: 14px;
+    @media (min-width: $width-medium) {
+      font-size: 16px;
+    }
+    font-weight: 300;
 }
 
 .q-title {
     font-family: $lato;
-    font-size: 20px;
+    font-weight: 600;
 }
 
 .question {

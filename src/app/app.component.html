@@ -16,7 +16,7 @@
                         <br>
                         <br> Queremos copar el espacio electoral y aportar a una democracia con mayor participación de todes; que las elecciones no queden en ir a votar y nada más. Queremos estimular el debate y aportar con soluciones concretas porque no estamos dispuestos/as a seguir postergando cuestiones que necesitan ser resueltas hoy. Desde Causas Comunes vamos a incidir para que en estas Elecciones 2019 escuchemos compromisos de nuestros/as candidatos/as con respecto a las políticas sobre drogas, la transparencia, nuestros derechos laborales, con perspectivas amplias, inclusivas y diversas.
                         <br>
-                        <br> !Sumate!
+                        <br> ¡Sumate!
                     </p>
                 </div>
             </div>
@@ -26,22 +26,22 @@
     <div class="w-100 follow-strip bg-azul-claro">
         <div class="container py-2 py-md-5">
             <div class="row px-2">
-                <div class="col col-12 col-md-6 col-lg-7">
+                <div class="col col-12 col-md-6 col-lg-5">
                     <h4 class="follow-title mb-3">Nuestras redes</h4>
-                    <a href="https://www.instagram.com/causascomunes/" target="_blank" class="follow-btn"><img class="mr-1" src="../assets/images/social_instagram_icon.png"></a>
-                    <a href="https://www.facebook.com/Causas-Comunes-449280685874685/" target="_blank" class="follow-btn f-btn"><img class="mx-1" src="../assets/images/social_facebook_icon.png"></a>
-                    <a href="https://twitter.com/causas_comunes" target="_blank" class="follow-btn"><img class="mx-1" src="../assets/images/social_twitter_icon.png"></a>
+                    <a href="https://www.instagram.com/causascomunes/" target="_blank" class="follow-btn"><img class="mr-1" src="../assets/images/social_instagram_icon.svg"></a>
+                    <a href="https://www.facebook.com/Causas-Comunes-449280685874685/" target="_blank" class="follow-btn f-btn"><img class="mx-1" src="../assets/images/social_facebook_icon.svg"></a>
+                    <a href="https://twitter.com/causas_comunes" target="_blank" class="follow-btn"><img class="mx-1" src="../assets/images/social_twitter_icon.svg"></a>
                     <a href="mailto:causascomunesx@gmail.com" target="_blank" class="follow-btn"><img class="mx-1" src="../assets/images/social_mail_icon.svg" height="46px"></a>
                 </div>
                 <div class="d-md-none col-12 blank-line">
                 </div>
-                <div class="col col-12 col-md-6 col-lg-5 newsletter">
+                <div class="col col-12 col-md-6 col-lg-7 newsletter pl-md-5">
                     <h4 class="follow-title mb-3">Nuestro newsletter</h4>
                     <form ngNoForm [formGroup]="formGroup" [hidden]="submitted">
                         <div class="news-container">
                             <input type="text" placeholder="Ingresá tu email." formControlName="email" class="news-input" />
                             <input type="hidden" formControlName="project" name="project" id="newsletter_project" />
-                            <button type="button" class="btn btn-white btn-news" (click)="submitNewsletter()">Suscribirme</button>
+                            <button type="button" class="btn btn-news mt-3 mt-lg-0 ml-0 ml-lg-2 d-block d-lg-inline-block" (click)="submitNewsletter()">Suscribirme</button>
                         </div>
                         <span class="error">{{newsletterMessage}}</span>
                     </form>

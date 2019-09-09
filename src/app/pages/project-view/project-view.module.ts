@@ -6,11 +6,13 @@ import { VideoSliderComponent } from '../../components/video-slider/video-slider
 import { ArticleComponent } from '../../components/article/article.component';
 import { AppRoutes } from '../../helpers/routes.helper';
 import { ComponentsModule } from '../../components/components.module';
+import { PropuestaSliderComponent } from '../../components/propuesta-slider/propuesta-slider.component';
 
 @NgModule({
     declarations: [
         ProjectViewComponent,
         VideoSliderComponent,
+        PropuestaSliderComponent,
         ArticleComponent
     ],
     imports: [

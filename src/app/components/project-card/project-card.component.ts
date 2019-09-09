@@ -50,6 +50,18 @@ export class ProjectCardComponent implements OnInit {
           bgCol = '#e71869';
           causa = 'Trabajo';
           break;
+          case 'transparencia':
+          bgCol = '#e61937';
+          causa = 'Transparencia';
+          break;
+          case 'vivienda':
+          bgCol = '#194a9a';
+          causa = 'Vivienda';
+          break;
+          case 'drogas':
+          bgCol = '#f9b112';
+          causa = 'Drogas';
+          break;
         }
         this.bgColor = bgCol;
         this.causa = causa;

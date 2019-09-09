@@ -14,6 +14,10 @@
     background-color: #cdcdcd;
     /* mismo b-radius que .politician-card */
     border-radius: 20px 20px 0px 0px; 
+  
+    .card-img-top{
+      border-radius: 20px 20px 0px 0px;
+    }
 }
 
 .img-card-top {
@@ -25,28 +29,30 @@
     border-radius: 30px;
     font-size: 14px;
     font-weight: 500;
+  
+  /* estos nombre vienen de {{stance}} en el html */
+  .AFavor & {
+      color: $aFavor;
+      background-color: $aFavor-light;
+  }
+  .EnContra & {
+      color: $enContra;
+      background-color: $enContra-light;
+  }
+  .SeAbstiene &, .NoConfirmado &, .SinDefinir &{
+      color: $seAbstiene;
+      background-color: $seAbstiene-light;
+  }
+  /*.NoConfirmado & {
+      color: $noConfirmado;
+      background-color: $noConfirmado-light;
+  }
+  .SinDefinir & {
+      color: $sinDefinir;
+      background-color: $sinDefinir-light;
+  }*/
 }
 
-/* estos nombre vienen de {{stance}} en el html */
-.AFavor .postura {
-    color: $aFavor;
-    background-color: $aFavor-light;
-}
-
-.EnContra .postura {
-    color: $enContra;
-    background-color: $enContra-light;
-}
-
-.NoConfirmado .postura {
-    color: $noConfirmado;
-    background-color: $noConfirmado-light;
-}
-
-.SeAbstiene .postura {
-    color: $seAbstiene;
-    background-color: $seAbstiene-light;
-}
 
 .title {
     display: block;
@@ -91,9 +97,15 @@
 }
 
 .modal-content {
-    border-radius: 0px;
+    border-radius: 20px;
     padding: 15px;
-    color: $gris-texto;
+    color: $gris-oscuro;
+    border: solid 1px #696969;
+    font-size: 14px;
+    @media (min-width: $width-medium) {
+      font-size: 16px;
+    }
+    font-weight: 300;
 }
 
 .example-message {
