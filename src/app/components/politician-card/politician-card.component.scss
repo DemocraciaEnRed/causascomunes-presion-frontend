@@ -29,28 +29,30 @@
     border-radius: 30px;
     font-size: 14px;
     font-weight: 500;
+  
+  /* estos nombre vienen de {{stance}} en el html */
+  .AFavor & {
+      color: $aFavor;
+      background-color: $aFavor-light;
+  }
+  .EnContra & {
+      color: $enContra;
+      background-color: $enContra-light;
+  }
+  .SeAbstiene &, .NoConfirmado &, .SinDefinir &{
+      color: $seAbstiene;
+      background-color: $seAbstiene-light;
+  }
+  /*.NoConfirmado & {
+      color: $noConfirmado;
+      background-color: $noConfirmado-light;
+  }
+  .SinDefinir & {
+      color: $sinDefinir;
+      background-color: $sinDefinir-light;
+  }*/
 }
 
-/* estos nombre vienen de {{stance}} en el html */
-.AFavor .postura {
-    color: $aFavor;
-    background-color: $aFavor-light;
-}
-
-.EnContra .postura {
-    color: $enContra;
-    background-color: $enContra-light;
-}
-
-.NoConfirmado .postura {
-    color: $noConfirmado;
-    background-color: $noConfirmado-light;
-}
-
-.SeAbstiene .postura {
-    color: $seAbstiene;
-    background-color: $seAbstiene-light;
-}
 
 .title {
     display: block;

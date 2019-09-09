@@ -21,12 +21,8 @@ export class PoliticianCardComponent implements OnInit {
                     this.stance = stance.name;
                     this.stance_id = stance.id;
                   
-                    let postura = 'Se desconoce';
+                    let postura = '';
                     switch (stance.name) {
-                      /*case 'NoConfirmado':
-                      case 'SinDefinir':
-                        postura = 'Se desconoce';
-                        break;*/
                       case 'AFavor':
                         postura = 'A favor';
                         break;
@@ -34,7 +30,9 @@ export class PoliticianCardComponent implements OnInit {
                         postura = 'En contra';
                         break;
                       case 'SeAbstiene':
-                        postura = 'Se abstiene';
+                      case 'NoConfirmado':
+                      case 'SinDefinir':
+                        postura = 'No sabe';
                         break;
                     }
                     this.stance_postura = postura;
