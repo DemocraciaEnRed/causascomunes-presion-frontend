@@ -88,8 +88,6 @@ export class ProjectViewComponent implements OnInit {
                         break;
                       case 'ambiente':
                         this.propuestas = [
-                          ['2323','sdddd'],
-                          ['h555555gf','y23ytr']
                         ];
                         break;
                     }
