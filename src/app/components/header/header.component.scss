@@ -42,15 +42,16 @@ header {
 
 .title {
     width: 100%;
-    margin-top: 55px;
     text-align: center;
     color: $blanco;
     font-family: $lato;
-    font-size: 30px;
+    margin-top: 85px;
+    margin-bottom: 10px;
     @media (min-width: $width-medium) {
-      font-size: 60px;
+      margin-top: 55px;
     }
     font-weight: 600;
+    @include font-size-media-medium(30px, 60px);
 }
 
 .subtitle {
@@ -58,11 +59,9 @@ header {
     margin-top: -30px;
     text-align: center;
     color: $blanco;
+    padding: 0 5rem;
     font-family: $lato;
-    font-size: 14px;
-    @media (min-width: $width-medium) {
-      font-size: 22px;
-    }
+    @include font-size-media-medium(16px, 22px);
     font-weight: normal;
 }
 
@@ -71,10 +70,7 @@ header {
     padding: 15px;
     color: $gris-oscuro;
     border: solid 1px #696969;
-    font-size: 14px;
-    @media (min-width: $width-medium) {
-      font-size: 16px;
-    }
+    @include font-size-text();
     font-weight: 300;
 }
 

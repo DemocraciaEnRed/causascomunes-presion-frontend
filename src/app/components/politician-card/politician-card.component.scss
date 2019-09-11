@@ -101,17 +101,14 @@
     padding: 15px;
     color: $gris-oscuro;
     border: solid 1px #696969;
-    font-size: 14px;
-    @media (min-width: $width-medium) {
-      font-size: 16px;
-    }
+    @include font-size-text();
     font-weight: 300;
 }
 
 .example-message {
     border: 1px solid #666666;
     background: #f3f3f3;
-    font-size: 20px;
+    @include font-size-media-medium(16px, 20px);
     font-family: $lato;
     font-style: italic;
 }

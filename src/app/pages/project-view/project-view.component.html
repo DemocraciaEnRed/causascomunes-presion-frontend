@@ -5,7 +5,7 @@
       <div class="row desc-strip">
           <div class="col">
               <div>
-                  <h1 class="desc-title">{{currentProject.name || "..."}}</h1>
+                  <h1 class="desc-title text-center text-md-left">{{currentProject.name || "..."}}</h1>
                   <div class="desc-text" [innerHtml]="projectDescription"></div>
               </div>
           </div>
@@ -28,7 +28,7 @@
         </div>
         <propuesta-slider [propuestas]="propuestas"></propuesta-slider>
         <div class="row text-right">
-          <button class="btn btn-change mt-4">¡Firmá acá!</button>
+          <button class="btn btn-change mt-4 mb-5">¡Firmá acá!</button>
         </div>
     </div>
 </div>

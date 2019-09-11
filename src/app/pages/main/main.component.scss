@@ -2,7 +2,7 @@
 
 .title {
     color: $azul-oscuro;
-    font-size: 35px;
+    @include font-size-tit();
     margin-top: 15px;
 }
 
@@ -10,6 +10,10 @@
     color: $negro;
     font-family: $lato;
     font-weight: lighter;
-    font-size: 18px;
+    @include font-size-text();
     font-weight: normal;
+}
+
+.desc-strip{
+    @include font-size-text();
 }

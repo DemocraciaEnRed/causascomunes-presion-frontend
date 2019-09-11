@@ -46,7 +46,8 @@ export class MainComponent {
                 if($highlighted) {
                     this.highlightedProjectExists = $highlighted;
                     this.highlightedProject = $highlightedProject;
-                    this.projectDescription = this.sanitizeHtml($highlightedProject.slider_text);
+                    //this.projectDescription = this.sanitizeHtml($highlightedProject.slider_text);
+                    this.projectDescription = $highlightedProject.slider_text;
                     this.politicianService
                         .getAllByProject($highlightedProject.slug, true)
                         .then(r => this.politiciansList = r.slice(0, 20).sort(function() {return .5 - Math.random(); }) );
