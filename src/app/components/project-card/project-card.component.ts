@@ -32,7 +32,8 @@ export class ProjectCardComponent implements OnInit {
         const backgroundAux = 'url(' +
             environment.imgBase + this.project.dir.replace(/\\/g, '/') + '/' + this.project.image + ')';
         this.backgroundImage = this.sanitizeStyle(backgroundAux);
-        this.projectDescription = this.sanitizeHtml(this.project.short_text);
+        //this.projectDescription = this.sanitizeHtml(this.project.short_text);
+        this.projectDescription = this.project.short_text;
       
         let bgCol='';
         let causa='';

@@ -149,13 +149,14 @@ a:hover {
 
 .info-title {
     font-family: $basker;
-    font-size: 2em;
     font-weight: bold;
+    @include font-size-tit();
 }
 
 .info-text {
     font-family: $lato;
     color: $negro;
+    @include font-size-text();
 }
 
 .follow-strip {

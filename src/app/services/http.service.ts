@@ -26,4 +26,12 @@ export class HttpService {
             .catch(err => err);
     }
 
+    public postExternal(url: string, data: any): Promise<any> {
+        return this.http
+            .post(url, data)
+            .toPromise()
+            .then(resp => resp)
+            .catch(err => err);
+    }
+
 }

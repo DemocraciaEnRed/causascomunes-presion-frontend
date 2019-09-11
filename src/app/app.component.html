@@ -39,8 +39,9 @@
                     <h4 class="follow-title mb-3">Nuestro newsletter</h4>
                     <form ngNoForm [formGroup]="formGroup" [hidden]="submitted">
                         <div class="news-container">
-                            <input type="text" placeholder="Ingresá tu email." formControlName="email" class="news-input" />
-                            <input type="hidden" formControlName="project" name="project" id="newsletter_project" />
+                            <input type="text" placeholder="Ingresá tu email." formControlName="email" class="news-input" name="EMAIL"/>
+                            <!--<input type="hidden" formControlName="project" name="project" id="newsletter_project" />-->
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_a2ed796c70f5a1770cbcb80ba_885233fed6" tabindex="-1" value=""></div>
                             <button type="button" class="btn btn-news mt-3 mt-lg-0 ml-0 ml-lg-2 d-block d-lg-inline-block" (click)="submitNewsletter()">Suscribirme</button>
                         </div>
                         <span class="error">{{newsletterMessage}}</span>

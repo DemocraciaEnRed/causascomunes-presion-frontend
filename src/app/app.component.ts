@@ -44,12 +44,16 @@ export class AppComponent {
       this.newsletterMessage = '';
       if(this.formGroup.valid) {
         console.log(this.formGroup);
+        window.open('https://causascomunes.us3.list-manage.com/subscribe/post?u=a2ed796c70f5a1770cbcb80ba&amp;id=885233fed6&MERGE0='+this.formGroup.value.email);
+        this.newsletterMessage = '¡Perfecto! Siga las instrucciones de la página de subscripción';
+        this.submitted = true;
+        /*
         this.httpService
           .post('api/v1/subscribe', JSON.stringify(this.formGroup.value))
           .then(response => {
             this.newsletterMessage = response;
             this.submitted = true;
-          });
+          });*/
       } else {
         this.newsletterMessage = 'Ingrese un email válido';
       }
