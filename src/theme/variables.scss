@@ -49,8 +49,8 @@ $gris-oscuro: #696969;
 //font sizes
 $font-size-text-desktop: 1rem;
 $font-size-text-mobile: 0.875rem;
-$font-size-subt-desktop: 1rem;
-$font-size-subt-mobile: 1rem;
+//$font-size-subt-desktop: 1rem;
+//$font-size-subt-mobile: 1rem;
 $font-size-tit-desktop: 2rem;
 $font-size-tit-mobile: 1.315rem;
 
@@ -63,9 +63,9 @@ $font-size-tit-mobile: 1.315rem;
 @mixin font-size-tit(){
   @include font-size-media-medium($font-size-tit-mobile, $font-size-tit-desktop);
 }
-@mixin font-size-subt(){ 
+/*@mixin font-size-subt(){ 
   @include font-size-media-medium($font-size-subt-mobile, $font-size-subt-desktop);
-}
+}*/
 @mixin font-size-text(){ 
   @include font-size-media-medium($font-size-text-mobile, $font-size-text-desktop);
 }

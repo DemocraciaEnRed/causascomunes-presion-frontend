@@ -1,4 +1,11 @@
 @import "../theme/variables";
 .newsletter-success {
     font-family: $lato;
+    @include font-size-text();
+}
+
+.newsletter{
+  .error{
+    color: red;
+  }
 }
