@@ -10,20 +10,26 @@ header {
 }
 
 .nav {
-    padding-top: 10px;
+    padding-top: 5px;
+    @media (min-width: $width-medium) {
+      padding-top: 10px;
+    }
     width: 100%;
     display:inline-block;
     text-align: center;
     color: $blanco;
     font-family: $lato;
-    font-size: 20px;
+    @include font-size-media-medium(18px, 20px);
     font-weight: normal;
 }
 
 .nav-aec-link, .nav-aec-link:visited {
     color: $blanco;
     border-bottom: 4px solid transparent;
-    padding-bottom: 10px;
+    padding-bottom: 2px;
+    @media (min-width: $width-medium) {
+      padding-bottom: 10px;
+    }
 }
 
 .nav-aec-link:hover {
@@ -45,7 +51,7 @@ header {
     text-align: center;
     color: $blanco;
     font-family: $lato;
-    margin-top: 85px;
+    margin-top: 50px;
     margin-bottom: 10px;
     @media (min-width: $width-medium) {
       margin-top: 55px;
