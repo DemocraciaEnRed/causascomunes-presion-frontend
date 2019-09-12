@@ -17,3 +17,8 @@
 .desc-strip{
     @include font-size-text();
 }
+
+.desc-strip-home{
+    @include font-size-text();
+    padding: 10px 0 30px;
+}

@@ -1,20 +1,20 @@
-<div class="bg-mosaico-blanco">
+<div class="bg-mosaico-blanco pt-4">
 <ng-template [ngIf]="highlightedProjectExists">
+
+    <politician-slider [politiciansList]="politiciansList" [project]="highlightedProject"></politician-slider>
 
     <div class="container">
 
         <!-- Descripcion -->
-        <div class="row desc-strip">
+        <div class="row desc-strip-home">
             <div class="col">
                 <div>
-                    <h1 class="desc-title text-center text-md-left">{{highlightedProject.name || "..."}}</h1>
-                    <div class="desc-text" [innerHtml]="projectDescription"></div>
+                    <!-- <h1 class="desc-title text-center text-md-left">{{highlightedProject.name || "..."}}</h1> -->
+                    <div class="desc-text">Cuando hagas click en los botones que están debajo de lxs candidatxs vas a poder contactarte directamente con ellxs y pedirles que apoyen nuestras causas (o decirles lo que quieras). Más abajo podés encontrar más información nuestras causas comunes. La agenda electoral la definimos nosotres. Sumate.</div>
                 </div>
             </div>
         </div>
     </div>
-
-    <politician-slider [politiciansList]="politiciansList" [project]="highlightedProject"></politician-slider>
 
     <div class="mt-5 w-100 separador"></div>
 </ng-template>
@@ -25,8 +25,8 @@
         <!-- Proyectos -->
         <div class="row">
             <div class="col py-4 text-center text-md-left">
-                <h2 class="title">Las Causas</h2>
-                <h4 class="subtitle">Ingresa para empezar a activar la causa</h4>
+                <h2 class="title">Nuestras Causas Comunes</h2>
+                <h4 class="subtitle">Ingresá a cada una de las causas para obtener más información y activar a lxs candidatxs.</h4>
             </div>
         </div>
         <div class="row">
