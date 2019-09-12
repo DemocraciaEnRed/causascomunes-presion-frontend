@@ -20,19 +20,8 @@
 
 <div class="mb-5 mb-md-0 w-100 separador"></div>
 
-<div class="w-100 bg-blanco change-org">  
-    <div class="container py-md-5">
-        <div class="row">
-            <div class="col">
-                <h3 class="title mb-4 text-center text-md-left">Lo que proponemos</h3>
-                <p class="text"></p>
-            </div>
-        </div>
-        <propuesta-slider [propuestas]="propuestas"></propuesta-slider>
-        <div class="row text-right">
-          <button class="btn btn-change mt-4 mb-5 mb-md-0">¡Firmá acá!</button>
-        </div>
-    </div>
+<div class="w-100 bg-blanco">  
+  <propuesta-slider [propuestasResumen]="propuestasResumen" [propuestas]="propuestas" [changeLink]="changeLink"></propuesta-slider>
 </div>
 
 <!-- Contador -->

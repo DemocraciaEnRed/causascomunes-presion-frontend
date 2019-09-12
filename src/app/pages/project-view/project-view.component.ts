@@ -19,7 +19,9 @@ export class ProjectViewComponent implements OnInit {
     public politiciansList = new Array<Politician>();
     public politiciansListSlider = new Array<Politician>();
   
+    public propuestasResumen: String;
     public propuestas: Array<Array<String>>;
+    public changeLink: String;
 
     public sanitizeHtml(html: string): any {
         return this.sanitizer.bypassSecurityTrustHtml(html);
@@ -70,24 +72,86 @@ export class ProjectViewComponent implements OnInit {
                         });
                     const element = document.querySelector('#activa');
                     element.scrollIntoView();
-            
-                    switch(p.slug.toLowerCase()){
-                      case 'genero':
+
+                    switch(p.slug.toLowerCase()){ 
+                      case 'vivienda':
+                        this.changeLink = ''
+                        this.propuestasResumen = 'Causas Comunes junto a Inquilinxs Agrupadxs y más organizaciones estamos desarrollando un proyecto de ley, para presentar en el Congreso, que incluye los siguientes puntos:'
                         this.propuestas = [
-                          ['Plazo mínimo', 'se extiende de dos a tres años el plazo mínimo de un contrato de alquiler.'], 
-                          ['Actualización del precio', 'establece que los aumentos sean anuales (no semestrales) con un índice de actualización objetivo.'], 
-                          ['Registro de contratos', 'el locador tiene la obligación de declarar el contrato ante el registro de la propiedad inmueble, para “blanquear” los contratos.'], 
-                          ['Depósito', 'reduce el depósito en garantía a un mes de alquiler, a devolverse en el momento de restitución del inmueble y con el monto actualizado al valor del último mes de alquiler.'], 
-                          ['Impuestos y expensas extraordinarias', 'el inquilino no tendrá a su cargo el pago de las expensas comunes extraordinarias'], 
-                          ['Renovación del contrato', 'se obliga a acordar las condiciones de la renovación con tres meses del fin del contrato.'], 
-                          ['Arreglos', 'el proyecto establece de qué forma y en qué plazos deben las partes ante un problema que demande reparaciones en el inmueble.'], 
-                          ['Resolución anticipada', 'se elimina el plazo mínimo de seis meses para rescindir el contrato, se puede rescindir en cualquier momento (pagando una multa)'], 
-                          ['Domicilio electrónico', 'las partes deben fijar un domicilio electrónico (mail) en el contrato de alquiler, para que todas las comunicaciones por ese medio sean válidas y vinculantes.'], 
-                          ['Pagarés', 'el proyecto prohíbe a los propietarios exigir la firma de pagarés a los inquilinos.']
+                          ["Plazo mínimo", "El contrato de alquiler se extiende de dos a tres años de plazo mínimo."],
+                          ["Actualización del precio", "Se establece que los aumentos sean anuales (no semestrales), ajustados a partir de un índice de actualización objetivo."],
+                          ["Depósito", "Se reduce el depósito en garantía a un mes de alquiler, a devolverse en el momento de restitución del inmueble y con el monto actualizado al valor del último mes de alquiler."],
+                          ["Registro de contratos", "El locador tiene la obligación de declarar el contrato ante el registro de la propiedad inmueble, para “blanquear” los contratos."],
+                          ["Renovación del contrato", "Se obliga a acordar las condiciones de la renovación con tres meses de antelación al fin del contrato."],
+                          ["Impuestos y expensas extraordinarias", "El inquilino no tendrá a su cargo el pago de las expensas comunes extraordinarias."],
+                          ["Arreglos", "El proyecto establece de qué forma y en qué plazos deben las partes ante un problema que demande reparaciones en el inmueble."],
+                          ["Resolución anticipada", "Se elimina el plazo mínimo de seis meses para rescindir el contrato, que se podrá rescindir en cualquier momento (pagando una multa)"],
+                          ["Domicilio electrónico", "Las partes deben fijar un domicilio electrónico (mail) en el contrato de alquiler, para que todas las comunicaciones por ese medio sean válidas y vinculantes."],
+                          ["Pagarés", "El proyecto prohíbe a los propietarios exigir la firma de pagarés a los inquilinos."],
+
+                        ];
+                        break;
+                      case 'trabajo':
+                        this.changeLink = ''
+                        this.propuestasResumen = 'Causas Comunes junto al Observatorio de Derechos de Internet en Argentina (O.D.I.A) y más organizaciones estamos desarrollando un proyecto de ley, para presentar en el Congreso, que incluye los siguientes puntos:'
+                        this.propuestas = [
+                          ["Plataformas digitales de servicios (pds)", "En el proyecto, se definen legalmente como “personas jurídicas que ofrecen sus prestaciones a través de una infraestructura digital cuyo propósito es organizar y controlar, por medio de algoritmos, la realización de los servicios conectando a los trabajadores con los clientes que los solicitan”."],
+                          ["“Economía colaborativa” y “economía bajo demanda”", "Que no se confunda, hay que garantizar la libre proliferación de la primera y regular legalmente la segunda"],
+                          ["Relación de dependencia", "Lxs trabajadorxs de plataformas no son “socios o colaboradores”, tampoco son “emprendedores”, son empleados en relación de dependencia que firman un contrato laboral."],
+                          ["Jornada autónoma (flexibilidad horaria)", "Lxs trabajadorxs tienen libertad para escoger sus horarios y cantidad de trabajo. eso sí, la jornada no podrá exceder las 12 horas al día, ni tampoco las 45 horas a la semana."],
+                          ["Control de la arbitrariedad", "Las pds deberán informar los criterios que la app utiliza para, entre otras cosas, asignar la prestación de un servicio, la forma de cálculo de la remuneración, el impacto que tienen las calificaciones que asignan."],
+                          ["Jornada pasiva", "El tiempo en que el/la trabajador/a se encuentra a disposición del empleador, es decir, conectado a la aplicación sin realizar labores, por causas que no le sean imputables forma parte de su jornada … y se paga."],
+                          ["Derecho a sindicalización", "Los trabajadores y trabajadoras de pds, tendrán el derecho de constituir las organizaciones sindicales que estimen convenientes."],
+                          ["Derechos fundamentales", "Entre otros, lxs trabajadorxs tendrán derecho a accionar por despidos injustificados y auto despido. además, tendrán seguro de riesgo de trabajo."],
+                        ];
+                        break;
+                      case 'drogas':
+                        this.changeLink = ''
+                        this.propuestasResumen = ''
+                        this.propuestas = [
+                          ["Regular lo que hoy ya ocurre", "La regulación se basa en el respeto por las libertades individuales y las prácticas culturales. se regula para minimizar las secuelas del narcotráfico y proteger la salud pública, no para promover el consumo."],
+                          ["Regular para aumentar la responsabilidad", "El objetivo de la regulación es tanto el consumo responsable del cannabis como su acceso en condiciones de máxima reducción de riesgos y de daños."],
+                          ["Fumar en espacios públicos", "La regulación impone las mismas restricciones para los espacios públicos impuestas a quienes fuman tabaco."],
+                          ["Regular la producción, distribución y comercialización", "La regulación busca ser estricta a la hora de evitar la publicidad y el lucro desmedido de nuevas corporaciones en torno al cannabis."],
+                          ["Protección de formas cooperativas", "La regulación protege el autocultivo y los clubes sociales y otras formas cooperativas de producción de cannabis, en tanto prácticas amparadas por la constitución y equilibradoras del precio de mercado."],
+                          ["No criminalizar la tenencia para consumo", "La regulación da estatus legal al “fallo arriola” de la corte suprema de justicia de la nación."],
+                        ];
+                        break;
+                      case 'transparencia':
+                        this.changeLink = ''
+                        this.propuestasResumen = 'Causas Comunes junto a Directorio Legislativo y más organizaciones estamos desarrollando un proyecto de ley, para presentar en el Congreso, que incluye los siguientes puntos:'
+                        this.propuestas = [
+                          ["Transparencia en organismos públicos", "El objetivo primordial de esta ley es asegurar que las decisiones públicas se tomen de la forma más abierta posible."],
+                          ["Diferencia entre “gestión de intereses” y “lobby”", "La “gestión de intereses” tiene que ver con promover una causa y es una actividad no remunerada; el “lobby” es una actividad retribuida económicamente."],
+                          ["Se crean registros de reuniones", "En ellos, lxs miembrxs de la administración pública tienen que declarar todas las audiencias y reuniones con personas que se dedican al lobby o a la gestión de intereses particulares. también tienen que declarar viajes y regalos (aunque sean protocolares)"],
+                          ["Registros digitales y de acceso público", "Los registros son actualizados una vez al mes, deben estar en formatos digitales de datos abiertos."],
+                          ["Incluye funcionarixs de los 3 poderes", "Además, incluye a la defensoría del pueblo, a la auditoría general, al ministerio público, al consejo de la magistratura y a las empresas privadas con participación estatal mayoritaria."],
+                          ["Sanciones para quienes mientan", "No declarar audiencias o reuniones u omitir detalles relevantes se considera una falta grave"],
                         ];
                         break;
                       case 'ambiente':
+                        this.changeLink = ''
+                        this.propuestasResumen = ''
                         this.propuestas = [
+                          ["Áreas de protección ambiental", "Se prohíbe la aplicación de agroquímicos en áreas urbanas y a menos 1.500 metros de viviendas permanentes y escuelas rurales, entre otras formas de asentamientos humanos, y, también, de criaderos de animales, ríos, arroyos, lagunas, embalses, diques y pozos de agua."],
+                          ["Aplicación aérea", "Se prohíbe la aplicación aérea de agrotóxicos."],
+                          ["Delito ambiental", "La aplicación de agroquímicos dentro de las áreas de protección se tipifica como “daño ambiental” y su responsabilidad no sólo le cabe a quien lo aplica sino también a los productores o propietarios del suelo y a las autoridades políticas, si es que no se muestran diligentes a la hora de evitar que se viole esta ley."],
+                          ["Lejos de niños, niñas y adolescentes", "Se prohibe la aplicación de agroquímicos y/o la manipulación de sus residuos en su presencia. también se restringe la posibilidad de encomendarles tareas que, en forma directa o indirecta, les vinculen con la manipulación de los mismos."],
+                          ["Sanciones", "Para quienes incumplieren, se establecen sanciones que van del “apercibimiento”, la “multa”, el “decomiso definitivo de vehículos utilizados al cometer la infracción” o la “inhabilitación de transportar y/o vender el producto cosechado”."],
+                        ];
+                        break;
+                      case 'genero':
+                        this.changeLink = ''
+                        this.propuestasResumen = 'Causas Comunes junto a Economía Feminista y más activistas estamos desarrollando un proyecto de ley, para presentar en el Congreso, que incluye los siguientes puntos:'
+                        this.propuestas = [
+                          ["Eliminación del iva a elementos para la gestión menstrual", "Se exime del pago de iva a toallas higiénicas, tampones, paños absorbentes lavables, esponjas marinas, copas menstruales y ropa interior absorbente."],
+                          ["Provisión gratuita", "De elementos para la gestión menstrual a niñas, adolescentes y mujeres (entre la menarca y el climaterio) en escuelas, hospitales, cárceles y en paradores con gente en situación de calle."],
+                          ["Inclusión de insumos en el plan médico obligatorio", "Se asegura que las obras sociales y prepagas asumen parte de la responsabilidad en la distribución y provisión de los elementos mencionados."],
+                          ["Disponibilidad sin intermediarixs", "Toallas higiénicas, tampones, paños absorbentes lavables, esponjas marinas, copas menstruales y ropa interior absorbente deben estar a disposición en los lugares mencionados, sin mediación alguna y respetando las elecciones personales"],
+                          ["Pedagogía de la menstruación", "Se garantiza la asistencia y capacitación en los aspectos que conciernen a la higiene y salud durante el ciclo menstrual como parte de los contenidos de educación sexual integral (esi). asimismo, se ordena generar campañas de sensibilización y visibilización de la temática y  la creación de una línea de atención para la recibir consultas y brindar orientación."],
+                          ["Disposición de los desechos", "Los establecimientos públicos deberán contar con instalaciones sanitarias acordes y con protocolos de disposición de los desechos."],
+                          ["Preferencia a la industria nacional", "La compra de los elementos de gestión menstrual que realice el estado nacional deberá darle preferencia a las empresas locales."],
+
                         ];
                         break;
                     }
