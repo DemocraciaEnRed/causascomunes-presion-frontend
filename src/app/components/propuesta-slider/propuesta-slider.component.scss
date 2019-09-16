@@ -1,5 +1,7 @@
 @import '../../../theme/variables.scss';
 
+$change-red-color: #ec2c22;
+
 h1 {
   @include font-size-media-medium(18px, 20px);
   font-weight: 500;
@@ -7,6 +9,13 @@ h1 {
 
 span {
   @include font-size-text();
+}
+
+.firmar-change{
+  span{
+    color: $change-red-color;
+    @include font-size-media-medium(18px, 20px);
+  }
 }
 
 .change-org{
@@ -28,7 +37,7 @@ span {
     margin: 0 auto;
     
     .btn-change {
-      background: #ec2c22;
+      background: $change-red-color;
       color: $blanco;
       font-weight: bold;
       padding: 13px 60px;

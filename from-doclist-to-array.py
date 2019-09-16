@@ -1,13 +1,19 @@
 #! python3
 import sys
 prepend_tabs='                          '
+tabs=''
+is_first=True
 for line in sys.stdin.readlines():
  l=line.strip()
  if not l: continue
  spl=l.split(':')
  tit=spl[0][1:].strip().capitalize()
  txt=spl[1].strip().capitalize()
- print(f'{prepend_tabs}["{tit}", "{txt}"],')
+ print(f'{tabs}["{tit}", "{txt}"],')
+ if is_first:
+  tabs=prepend_tabs
+  is_first=False
+
 
 
 # Docus:
