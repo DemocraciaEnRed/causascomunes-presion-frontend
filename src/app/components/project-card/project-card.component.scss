@@ -47,8 +47,8 @@
 
     .project-description {
         height: calc(100% - 34px);
-        font-size: 14px;
-        line-height: 1.3em;
+        @include font-size-media-medium(14px, 16px);
+        line-height: 1.2em;
         /* En src/theme/general-classes.scss están los estilos de los títulos (línea 16) */
     }
 }

@@ -21,6 +21,7 @@ span {
 
   .text {
       color: $negro;
+      @include font-size-media-medium(17px, 19px);
   }
   
   a {
