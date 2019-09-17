@@ -1,5 +1,15 @@
 <div class="bg-mosaico-blanco pt-4">
 <ng-template [ngIf]="highlightedProjectExists">
+    <div class="container">
+        <!-- Título -->
+        <div class="row desc-strip-home">
+            <div class="col">
+                <div>
+                    <h1 class="desc-title text-center text-md-left">{{highlightedProject.name || "..."}}</h1>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <politician-slider [politiciansList]="politiciansList" [project]="highlightedProject"></politician-slider>
 
