@@ -1,25 +1,23 @@
 <div class="bg-mosaico-blanco pt-4">
 <ng-template [ngIf]="highlightedProjectExists">
+    <!-- Título y descripcion-->
     <div class="container">
-        <!-- Título -->
         <div class="row desc-strip-home">
             <div class="col">
                 <div>
                     <h1 class="desc-title text-center text-md-left">{{highlightedProject.name || "..."}}</h1>
+                    <div class="desc-text" [innerHtml]="projectDescription"></div>
                 </div>
             </div>
         </div>
     </div>
 
     <politician-slider [politiciansList]="politiciansList" [project]="highlightedProject"></politician-slider>
-
+  
     <div class="container">
-
-        <!-- Descripcion -->
-        <div class="row desc-strip-home">
+        <div class="row uso-strip-home">
             <div class="col">
                 <div>
-                    <!-- <h1 class="desc-title text-center text-md-left">{{highlightedProject.name || "..."}}</h1> -->
                     <div class="desc-text">Cuando hagas click en los botones que están debajo de lxs candidatxs vas a poder contactarte directamente con ellxs y pedirles que apoyen nuestras causas (o decirles lo que quieras). Más abajo podés encontrar más información nuestras causas comunes. La agenda electoral la definimos nosotres. Sumate.</div>
                 </div>
             </div>
