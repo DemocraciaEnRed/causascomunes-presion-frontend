@@ -25,6 +25,9 @@ import { ComponentsModule } from './components/components.module';
 import { FullListModule } from './pages/full-list/full-list.module';
 import { AppRoutes } from './helpers/routes.helper';
 
+//import 'angular-carousel';
+import * as angularCarousel from "angular-carousel";
+
 @NgModule({
   declarations: [
     AppComponent,
