@@ -65,7 +65,7 @@ export class PoliticianCardComponent implements OnInit {
     public openTwitterWindow(): void {
         this.tallyUp();
         const randomTweet = this.getRandomMessage().replace('@', '@' + this.politician.twitter);
-        window.open('https://twitter.com/intent/tweet?text=' + encodeURI(randomTweet), '_blank');
+        window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(randomTweet), '_blank');
     }
 
     public generateRandomMessage(): void {
