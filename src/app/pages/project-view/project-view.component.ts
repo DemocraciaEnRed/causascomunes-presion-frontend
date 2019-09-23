@@ -127,7 +127,7 @@ export class ProjectViewComponent implements OnInit {
                         break;
                       case 'ambiente':
                         this.changeLink = ''
-                        this.propuestasResumen = 'Causas Comunes junto a distintxs activistas estamos desarrollando <a target="_blank" rel="noopener noreferrer" href="https://propuestas.causascomunes.org/articulado?id=5d7a9b68ee136700188ea5c2">un proyecto de ley</a> basado en uno del Senador Pino Solanas para presentar presentar en el Congreso que incluye los siguientes puntos:'
+                        this.propuestasResumen = 'Causas Comunes junto a distintxs activistas estamos desarrollando <a target="_blank" rel="noopener noreferrer" href="https://propuestas.causascomunes.org/articulado?id=5d7a9b68ee136700188ea5c2">un proyecto de ley</a> basado en uno del Senador Pino Solanas para presentar en el Congreso que incluye los siguientes puntos:'
                         this.propuestas = [
                           ["Áreas de protección ambiental", "Se prohíbe la aplicación de agroquímicos en áreas urbanas y a menos 1.500 metros de viviendas permanentes y escuelas rurales, entre otras formas de asentamientos humanos, y, también, de criaderos de animales, ríos, arroyos, lagunas, embalses, diques y pozos de agua."],
                           ["Delito ambiental", "La aplicación de agroquímicos dentro de las áreas de protección se tipifica como “daño ambiental” y su responsabilidad no sólo le cabe a quien lo aplica sino también a los productores o propietarios del suelo y a las autoridades políticas, si es que no se muestran diligentes a la hora de evitar que se viole esta ley."],
