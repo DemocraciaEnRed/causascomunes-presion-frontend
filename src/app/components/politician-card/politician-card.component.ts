@@ -32,7 +32,7 @@ export class PoliticianCardComponent implements OnInit {
                       case 'SeAbstiene':
                       case 'NoConfirmado':
                       case 'SinDefinir':
-                        postura = 'No sabe';
+                        postura = 'No confirmado';
                         break;
                     }
                     this.stance_postura = postura;
