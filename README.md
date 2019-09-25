@@ -1,19 +1,23 @@
 # Causas Comunes - Frontend
 
+Tal vez salgan errores por la versión de node que usen.
+Sugiero utilizar `nvm` como manejador de versiones de node.
+A mí me funciona con lts/carbon (v8.16.1).
+
 ## DEV
 
 ```
-cd frontend
 yarn
 yarn start
 ```
 
-
 ## Deployment
 
+Nunca olvidarse de hacer build antes de pushear!
+
 ```
-cd frontend
 yarn build
+git push
 ```
 
 
