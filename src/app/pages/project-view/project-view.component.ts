@@ -76,7 +76,7 @@ export class ProjectViewComponent implements OnInit {
                     switch(p.slug.toLowerCase()){ 
                       case 'vivienda':
                         this.changeLink = 'https://www.change.org/alquileresmasjustos'
-                        this.propuestasResumen = 'Causas Comunes junto a <a target="_blank" rel="noopener noreferrer" href="https://www.inquilinosagrupados.com.ar/">Federación Nacional de Inquilinos</a> y más organizaciones estamos desarrollando <a target="_blank" rel="noopener noreferrer" href="https://propuestas.causascomunes.org/articulado?id=5d7a9a8aee136700188ea5be">un proyecto de ley</a>, para presentar en el Congreso, que incluye los siguientes puntos:'
+                        this.propuestasResumen = 'Causas Comunes junto a Federación Nacional de Inquilinos y más organizaciones estamos desarrollando <a target="_blank" rel="noopener noreferrer" href="https://propuestas.causascomunes.org/articulado?id=5d7a9a8aee136700188ea5be">un proyecto de ley</a>, para presentar en el Congreso, que incluye los siguientes puntos:'
                         this.propuestas = [
                           ["Plazo mínimo", "El contrato de alquiler se extiende de 2 a 3 años de plazo mínimo."],
                           ["Actualización del precio", "Se establece que los aumentos sean anuales (no semestrales), ajustados a partir de un índice de actualización objetivo."],
