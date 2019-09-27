@@ -7,16 +7,16 @@
         <span class="title mt-2 {{apellido_para_css}}">{{politician_full_name}}</span>
         <span class="subtitle">{{politician.party.name}}</span>
         <div class="button-container mt-auto px-4">
-            <button *ngIf="politician.twitter" type="button" class="contact-button" (click)="ga('send', 'event', 'Buttons', 'click', 'Twitter - {{politician_full_name}}');openTwitterWindow()">
+            <button *ngIf="politician.twitter" type="button" class="contact-button" (click)="gtag('event', 'click', { 'event_category': 'Buttons', 'event_label': 'Twitter - ' + politician_full_name });openTwitterWindow()">
                 <i class="fab fa-twitter"></i>&emsp;Twittear
             </button>
-            <button *ngIf="politician.facebook" type="button" class="contact-button" (click)="ga('send', 'event', 'Buttons', 'click', 'Facebook - {{politician_full_name}}');generateRandomMessage()" data-toggle="modal" [attr.data-target]="'#facebookModal' + politician.id">
+            <button *ngIf="politician.facebook" type="button" class="contact-button" (click)="gtag('event', 'click', { 'event_category': 'Buttons', 'event_label': 'Facebook - ' + politician_full_name });generateRandomMessage()" data-toggle="modal" [attr.data-target]="'#facebookModal' + politician.id">
                 <i class="fab fa-facebook-f"></i>&emsp;Facebook
             </button>
-            <button *ngIf="politician.instagram" type="button" class="contact-button" (click)="ga('send', 'event', 'Buttons', 'click', 'Instagram - {{politician_full_name}}');generateRandomMessage()" data-toggle="modal" [attr.data-target]="'#instagramModal' + politician.id">
+            <button *ngIf="politician.instagram" type="button" class="contact-button" (click)="gtag('event', 'click', { 'event_category': 'Buttons', 'event_label': 'Instagram - ' + politician_full_name });generateRandomMessage()" data-toggle="modal" [attr.data-target]="'#instagramModal' + politician.id">
                 <i class="fab fa-instagram"></i>&emsp;Instagram
             </button>
-            <button *ngIf="politician.phone" type="button" class="contact-button" data-toggle="modal" (click)="ga('send', 'event', 'Buttons', 'click', 'Teléfono - {{politician_full_name}}');generateRandomMessage()" [attr.data-target]="'#callModal' + politician.id">
+            <button *ngIf="politician.phone" type="button" class="contact-button" data-toggle="modal" (click)="gtag('event', 'click', { 'event_category': 'Buttons', 'event_label': 'Teléfono - ' + politician_full_name });generateRandomMessage()" [attr.data-target]="'#callModal' + politician.id">
                 <i class="fas fa-phone"></i>&emsp;Llamar
             </button>
         </div>
