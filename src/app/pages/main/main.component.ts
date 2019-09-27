@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { ProjectService } from '../../services/project.service';
 import { PoliticianService } from './../../services/politician.service';
@@ -19,6 +19,7 @@ export class MainComponent {
     public highlightedProject: Project;
     public politiciansList: Array<Politician>;
     public projectDescription: SafeHtml;
+    public isMobileView: Boolean;
 
     public sanitizeHtml(html: string): any {
         return this.sanitizer.bypassSecurityTrustHtml(html);
@@ -60,5 +61,25 @@ export class MainComponent {
                     this.tally = response;
                 });
     }
+
+    ngOnInit() {
+        if( window.innerWidth <= 768) {
+            this.isMobileView = true;
+        } else {
+            this.isMobileView = false;
+        }
+    }
+
+    @HostListener('window:resize', ['$event'])
+    onResize(_event) {
+        if( window.innerWidth <= 768) {
+            this.isMobileView = true;
+        } else {
+            this.isMobileView = false;
+        }
+        console.log('projectList', this.projectList);
+    }
+
+
 
 }
