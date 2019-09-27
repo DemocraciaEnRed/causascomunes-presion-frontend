@@ -107,11 +107,12 @@ export class ProjectViewComponent implements OnInit {
                         this.changeLink = ''
                         this.propuestasResumen = 'Causas Comunes junto a las organizaciones que componen la <a target="_blank" rel="noopener noreferrer" href="http://regulacionlegal.org">Campaña Nacional por la Regulación del Cannabis</a> estamos desarrollando <a target="_blank" rel="noopener noreferrer" href="https://propuestas.causascomunes.org/articulado?id=5d7a9bc8ee136700188ea5c4">un acuerdo</a> que sirva de base para presentar, en el Congreso, un proyecto de ley que incluya los siguientes puntos:'
                         this.propuestas = [
-                          ["Transparencia en organismos públicos", "El objetivo primordial del proyecto es asegurar que las decisiones públicas se tomen de la forma más abierta posible."],
-                          ["Registros digitales y de acceso público", "Los registros son actualizados una vez al mes, deben estar en formatos digitales de datos abiertos."],
-                          ["Se crean registros de reuniones", "En ellos, lxs miembrxs de la administración pública tienen que declarar todas las audiencias y reuniones con personas que se dedican al lobby o a la gestión de intereses particulares. también tienen que declarar viajes y regalos (aunque sean protocolares)"],
-                          ["Incluye funcionarixs de los 3 poderes", "Además, incluye a la defensoría del pueblo, a la auditoría general, al ministerio público, al consejo de la magistratura y a las empresas privadas con participación estatal mayoritaria."],
-                          ["Sanciones para quienes mientan", "No declarar audiencias o reuniones u omitir detalles relevantes se considera una falta grave"],
+                          ["Ordenar lo que hoy ya ocurre", "La propuesta de regulación legal se basa en el respeto por las libertades individuales y las prácticas culturales. se regula para minimizar las secuelas del narcotráfico y proteger la salud pública, no para promover el consumo."],
+                          ["Regular para aumentar la responsabilidad", "El objetivo de la regulación es tanto el consumo responsable del cannabis como su acceso en condiciones de máxima reducción de riesgos y de daños."],
+                          ["Regular la producción, distribución y comercialización", "La regulación busca ser estricta a la hora de evitar la publicidad y el lucro desmedido de nuevas corporaciones en torno al cannabis."],
+                          ["Protección de formas cooperativas", "La regulación protege el autocultivo y los clubes sociales y otras formas cooperativas de producción de cannabis, en tanto prácticas amparadas por la constitución y equilibradoras del precio de mercado."],
+                          ["No criminalizar la tenencia para consumo", "La regulación da estatus legal al “fallo arriola” de la corte suprema de justicia de la nación."],
+
                         ];
                         break;
                       case 'transparencia':
