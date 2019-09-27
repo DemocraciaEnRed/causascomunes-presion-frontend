@@ -49,7 +49,6 @@ export class PoliticianCardComponent implements OnInit {
     public last: boolean;
     public stance_postura: string;
     public apellido_para_css: string;
-    public politician_full_name: string;
 
     public constructor(public configService: ConfigService,
         public projectService: ProjectService) {
@@ -61,7 +60,6 @@ export class PoliticianCardComponent implements OnInit {
         let politicianLNameLower = this.politician.last_name.toLowerCase()
         if (politicianLNameLower.indexOf('centurión') != -1)
           this.apellido_para_css = 'centurion';
-        this.politician_full_name = this.politician.first_name + ' ' + this.politician.last_name
     }
 
     public openTwitterWindow(): void {
@@ -71,7 +69,7 @@ export class PoliticianCardComponent implements OnInit {
     }
 
     public generateRandomMessage(): void {
-        this.randomMessage = this.getRandomMessage().replace('@', this.politician_full_name);
+        this.randomMessage = this.getRandomMessage().replace('@', this.politician.first_name + ' ' + this.politician.last_name);
     }
 
     public openFacebookWindow(): void {
