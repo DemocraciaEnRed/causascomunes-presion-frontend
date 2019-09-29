@@ -5,6 +5,7 @@ import { PoliticianService } from './../../services/politician.service';
 import { Project } from '../../model/project';
 import { ConfigService } from '../../services/config.service';
 import { Politician } from '../../model/politician';
+import * as Flickity from "flickity"
 
 @Component({
     selector: 'main-page',
@@ -20,6 +21,7 @@ export class MainComponent {
     public politiciansList: Array<Politician>;
     public projectDescription: SafeHtml;
     public isMobileView: Boolean;
+    public slider: Flickity;
 
     public sanitizeHtml(html: string): any {
         return this.sanitizer.bypassSecurityTrustHtml(html);
@@ -54,6 +56,9 @@ export class MainComponent {
                         .then(r => this.politiciansList = r.slice(0, 20).sort(function() {return .5 - Math.random(); }) );
                 }
                 this.projectList = response;
+                if (this.isMobileView) {
+                    this.initializeCarousel()
+                }
             });
         this.configService
                 .getTally()
@@ -70,16 +75,28 @@ export class MainComponent {
         }
     }
 
+    initializeCarousel() {
+        setTimeout( () => {
+            this.slider = new Flickity( '.project-carousel', {
+                // options
+                cellAlign: 'center',
+                autoPlay: true,
+                wrapAround: true,
+                pauseAutoPlayOnHover: false
+            });
+        }, 200);
+    }	
+
     @HostListener('window:resize', ['$event'])
     onResize(_event) {
-        if( window.innerWidth <= 768) {
+        const wasMobileView = Boolean(this.isMobileView);
+        if ( window.innerWidth <= 768) {
             this.isMobileView = true;
+            if(!wasMobileView) {
+                this.initializeCarousel();
+            }
         } else {
             this.isMobileView = false;
         }
-        console.log('projectList', this.projectList);
     }
-
-
-
 }

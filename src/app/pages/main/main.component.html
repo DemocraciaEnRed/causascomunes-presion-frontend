@@ -45,7 +45,13 @@
                     </ng-template>
                 </ng-template>
                 <ng-template [ngIf]="isMobileView">
-                    <h1>Dibujar aca slider de causas</h1>
+                    <ng-template [ngIf]="projectList">
+                        <div class="project-carousel">
+                            <ng-template ngFor let-p [ngForOf]="projectList">
+                                <project-card [project]="p" class="item-carousel"></project-card>
+                            </ng-template>
+                        </div>
+                    </ng-template>
                 </ng-template>
             </div>
         </div>

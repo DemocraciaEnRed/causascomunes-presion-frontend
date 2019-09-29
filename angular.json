@@ -21,13 +21,15 @@
               "src/favicon.ico"
             ],
             "styles": [
+              "node_modules/flickity/dist/flickity.min.css",
               "src/theme/styles.scss"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/popper.js/dist/umd/popper.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
-              "node_modules/jquery/dist/jquery.js"
+              "node_modules/jquery/dist/jquery.js",
+              "node_modules/flickity/dist/flickity.pkgd.min.js"
             ]
           },
           "configurations": {
@@ -77,7 +79,8 @@
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/popper.js/dist/umd/popper.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_modules/flickity/dist/flickity.pkgd.min.js"
             ],
             "styles": [
               "src/styles.css"
