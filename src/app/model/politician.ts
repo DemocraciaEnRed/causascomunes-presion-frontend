@@ -1,13 +1,13 @@
 import { Party } from './party';
 import { Stance } from './stance';
 import { District } from './district';
-import { Position } from './position';
 
 export class Politician {
 
     public id: Number;
     public first_name: string;
     public last_name: string;
+    public position = '';
     public marital_status: string;
     public instagram: string;
     public facebook: string;
@@ -21,7 +21,6 @@ export class Politician {
     public party = new Party();
     public district = new District();
     public stances = new Array<Stance>();
-    public position = new Position();
 
     public static asignProps(p1: Politician, p2: Politician) {
       p1.id = p2.id;
@@ -36,7 +35,7 @@ export class Politician {
       p1.gender = p2.gender;
       p1.image = (!p2.image || /^\s*$/.test(p2.image)) ? 'person-placeholder.png' : p2.image;
       p1.dir = (!p2.image || /^\s*$/.test(p2.image)) ? '/img/placeholders/personas' : p2.dir;
-      p1.position = p2.position as Position;
+      p1.position = p2.position;
       p1.facebook = p2.facebook;
       p1.instagram = p2.instagram;
       p1.stances = p2.stances as Array<Stance>;

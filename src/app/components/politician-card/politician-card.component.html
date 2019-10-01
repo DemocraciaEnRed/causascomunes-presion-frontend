@@ -4,8 +4,7 @@
     </div>
     <div class="card-body {{stance}}">
         <span class="postura px-4 py-1">{{stance_postura}}</span>
-        <span class="title mt-2">{{politician.first_name}} {{politician.last_name}}</span>
-        <span class="subtitle">{{politician.position.name}}</span>
+        <span class="title mt-2 {{apellido_para_css}}">{{politician.first_name}} {{politician.last_name}}</span>
         <span class="subtitle">{{politician.party.name}}</span>
         <div class="button-container mt-auto px-4">
             <button *ngIf="politician.twitter" type="button" class="contact-button" (click)="openTwitterWindow()">
