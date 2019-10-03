@@ -8,7 +8,7 @@ export class Politician {
     public id: Number;
     public first_name: string;
     public last_name: string;
-    public position = '';
+    public position = new Position();
     public marital_status: string;
     public instagram: string;
     public facebook: string;
