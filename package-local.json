@@ -3,7 +3,7 @@
     "version": "2.0.0",
     "license": "MIT",
     "api": "http://localhost:7000/",
-    "imgBase": "https://localhost:7000/",
+    "imgBase": "http://localhost:7000/",
     "production": false,
     "scripts": {
         "ng": "ng",
