@@ -4,25 +4,25 @@
 
     <br>
 
-    <stats [project]="project" [requestFullList]="false" [politiciansList]="politiciansList"></stats>
+    <!--<stats [project]="project" [requestFullList]="false" [politiciansList]="politiciansList"></stats>
 
-    <br>
+    <br>-->
 
     <div class="row mb-5">
         <div class="col col-12">
             <div>
-                <span class="message">Hablá con lxs politicxs para influir en su voto. Conocé sus posturas:</span>
-                <div class="pos aFavor">A FAVOR</div>
+                <span class="message">Decile a lxs politicxs lo que pensás. Conocé sus posturas.</span>
+                <!--<div class="pos aFavor">A FAVOR</div>
                 <div class="pos enContra">EN CONTRA</div>
                 <div class="pos noConfirmado">NO CONFIRMADO</div>
-                <div class="pos seAbstiene">SE ABSTIENE</div>
+                <div class="pos seAbstiene">SE ABSTIENE</div>-->
             </div>
         </div>
     </div>
 
     <div class="row mb-4">
         <div class="col">
-            <label class="filter-label">Posicion</label>
+            <label class="filter-label">Posición</label>
             <select name="selectedPosition" [(ngModel)]="selectedPosition" class="form-control" (change)="onFilterChange('position', $event.target.value)">
                 <option>Todas</option>
                 <option value="AFavor">A favor</option>
