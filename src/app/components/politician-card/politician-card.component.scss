@@ -59,8 +59,6 @@
     text-align: left;
     font-family: $lato;  
     font-size: 18px;
-    /* "Juan José Gomez Centurión" es muy largo y hace salto de línea; así no*/
-    &.centurion { font-size: 17px; }
     font-weight: 600;
     color: #474747;
     font-weight: bold;

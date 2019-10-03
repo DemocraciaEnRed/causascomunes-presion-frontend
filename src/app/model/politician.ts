@@ -1,6 +1,7 @@
 import { Party } from './party';
 import { Stance } from './stance';
 import { District } from './district';
+import { Position } from './position';
 
 export class Politician {
 
@@ -35,7 +36,7 @@ export class Politician {
       p1.gender = p2.gender;
       p1.image = (!p2.image || /^\s*$/.test(p2.image)) ? 'person-placeholder.png' : p2.image;
       p1.dir = (!p2.image || /^\s*$/.test(p2.image)) ? '/img/placeholders/personas' : p2.dir;
-      p1.position = p2.position;
+      p1.position = p2.position as Position;
       p1.facebook = p2.facebook;
       p1.instagram = p2.instagram;
       p1.stances = p2.stances as Array<Stance>;

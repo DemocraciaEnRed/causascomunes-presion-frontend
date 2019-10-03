@@ -48,7 +48,6 @@ export class PoliticianCardComponent implements OnInit {
     public randomMessage: string;
     public last: boolean;
     public stance_postura: string;
-    public apellido_para_css: string;
 
     public constructor(public configService: ConfigService,
         public projectService: ProjectService) {
@@ -56,10 +55,6 @@ export class PoliticianCardComponent implements OnInit {
 
     public ngOnInit(): void {
         this.imgUrl = environment.imgBase + this.politician.dir + '/box-' + this.politician.image;
-        this.apellido_para_css = '';
-        let politicianLNameLower = this.politician.last_name.toLowerCase()
-        if (politicianLNameLower.indexOf('centurión') != -1)
-          this.apellido_para_css = 'centurion';
     }
 
     public openTwitterWindow(): void {
