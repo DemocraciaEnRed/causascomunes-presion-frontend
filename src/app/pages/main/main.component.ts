@@ -55,7 +55,15 @@ export class MainComponent {
                         .getAllByProject($highlightedProject.slug, true)
                         .then(r => this.politiciansList = r.slice(0, 20).sort(function() {return .5 - Math.random(); }) );
                 }
-                this.projectList = response;
+          
+                let debatePrefijo = 'debate-'
+                let rProjectList = []
+                response.forEach(function(project) {
+                    if (project.slug.substring(0, debatePrefijo.length) !== debatePrefijo)
+                      rProjectList.push(project)
+                });
+                this.projectList = rProjectList;
+          
                 if (this.isMobileView) {
                     this.initializeCarousel()
                 }

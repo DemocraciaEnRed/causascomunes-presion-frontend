@@ -27,7 +27,15 @@ export class AppComponent {
     });
     this.projectService
         .getAll()
-        .then(response => this.projectList = response);
+        .then(response => {
+            let debatePrefijo = 'debate-'
+            let rProjectList = []
+            response.forEach(function(project) {
+                if (project.slug.substring(0, debatePrefijo.length) !== debatePrefijo)
+                  rProjectList.push(project)
+            });
+            this.projectList = rProjectList;
+        });
   }
 
   navBarTogglerIsVisible() {
