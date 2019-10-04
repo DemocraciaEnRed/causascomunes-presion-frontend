@@ -22,6 +22,7 @@ export class ProjectViewComponent implements OnInit {
     public propuestasResumen: String;
     public propuestas: Array<Array<String>>;
     public changeLink: String;
+    public propuestaLink: String;
 
     public sanitizeHtml(html: string): any {
         return this.sanitizer.bypassSecurityTrustHtml(html);
@@ -76,7 +77,8 @@ export class ProjectViewComponent implements OnInit {
                     switch(p.slug.toLowerCase()){ 
                       case 'vivienda':
                         this.changeLink = 'https://www.change.org/alquileresmasjustos'
-                        this.propuestasResumen = 'Causas Comunes junto a Federación Nacional de Inquilinos y más organizaciones estamos desarrollando <a target="_blank" rel="noopener noreferrer" href="https://propuestas.causascomunes.org/articulado?id=5d7a9a8aee136700188ea5be">un proyecto de ley</a>, para presentar en el Congreso, que incluye los siguientes puntos:'
+                        this.propuestaLink = 'https://propuestas.causascomunes.org/articulado?id=5d7a9a8aee136700188ea5be'
+                        this.propuestasResumen = 'Causas Comunes junto a Federación Nacional de Inquilinos y más organizaciones estamos desarrollando <strong><a target="_blank" rel="noopener noreferrer" href="https://propuestas.causascomunes.org/articulado?id=5d7a9a8aee136700188ea5be">un proyecto de ley</a></strong>, para presentar en el Congreso, que incluye los siguientes puntos:'
                         this.propuestas = [
                           ["Plazo mínimo", "El contrato de alquiler se extiende de 2 a 3 años de plazo mínimo."],
                           ["Actualización del precio", "Se establece que los aumentos sean anuales (no semestrales), ajustados a partir de un índice de actualización objetivo."],
@@ -92,7 +94,8 @@ export class ProjectViewComponent implements OnInit {
                         break;
                       case 'trabajo':
                         this.changeLink = 'https://www.change.org/derechoslaborales'
-                        this.propuestasResumen = 'Causas Comunes junto al <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/odiaasoc">Observatorio de Derechos de Internet en Argentina (O.D.I.A)</a> y más organizaciones estamos desarrollando <a target="_blank" rel="noopener noreferrer" href="https://propuestas.causascomunes.org/articulado?id=5d7a9b11ee136700188ea5c0">un proyecto de ley</a>, para presentar en el Congreso, que incluye los siguientes puntos:'
+                        this.propuestaLink = 'https://propuestas.causascomunes.org/articulado?id=5d7a9b11ee136700188ea5c0'
+                        this.propuestasResumen = 'Causas Comunes junto al <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/odiaasoc">Observatorio de Derechos de Internet en Argentina (O.D.I.A)</a> y más organizaciones estamos desarrollando <strong><a target="_blank" rel="noopener noreferrer" href="https://propuestas.causascomunes.org/articulado?id=5d7a9b11ee136700188ea5c0">un proyecto de ley</a></strong>, para presentar en el Congreso, que incluye los siguientes puntos:'
                         this.propuestas = [
                           ["Plataformas digitales de servicios (pds)", "En el proyecto, se definen legalmente como “personas jurídicas que ofrecen sus prestaciones a través de una infraestructura digital cuyo propósito es organizar y controlar, por medio de algoritmos, la realización de los servicios conectando a los trabajadores con los clientes que los solicitan”."],
                           ["Relación de dependencia", "Lxs trabajadorxs de plataformas no son “socios o colaboradores”, tampoco son “emprendedores”, son empleados en relación de dependencia que firman un contrato laboral."],
@@ -105,7 +108,8 @@ export class ProjectViewComponent implements OnInit {
                         break;
                       case 'drogas':
                         this.changeLink = ''
-                        this.propuestasResumen = 'Causas Comunes junto a las organizaciones que componen la <a target="_blank" rel="noopener noreferrer" href="http://regulacionlegal.org">Campaña Nacional por la Regulación del Cannabis</a> estamos desarrollando <a target="_blank" rel="noopener noreferrer" href="https://propuestas.causascomunes.org/articulado?id=5d7a9bc8ee136700188ea5c4">un acuerdo</a> que sirva de base para presentar, en el Congreso, un proyecto de ley que incluya los siguientes puntos:'
+                        this.propuestaLink = 'https://propuestas.causascomunes.org/articulado?id=5d8a2a8cee136700188ea5e8'
+                        this.propuestasResumen = 'Causas Comunes junto a las organizaciones que componen la <a target="_blank" rel="noopener noreferrer" href="http://regulacionlegal.org">Campaña Nacional por la Regulación del Cannabis</a> estamos desarrollando <strong><a target="_blank" rel="noopener noreferrer" href="https://propuestas.causascomunes.org/articulado?id=5d7a9bc8ee136700188ea5c4">un acuerdo</a></strong> que sirva de base para presentar, en el Congreso, un proyecto de ley que incluya los siguientes puntos:'
                         this.propuestas = [
                           ["Ordenar lo que hoy ya ocurre", "La propuesta de regulación legal se basa en el respeto por las libertades individuales y las prácticas culturales. se regula para minimizar las secuelas del narcotráfico y proteger la salud pública, no para promover el consumo."],
                           ["Regular para aumentar la responsabilidad", "El objetivo de la regulación es tanto el consumo responsable del cannabis como su acceso en condiciones de máxima reducción de riesgos y de daños."],
@@ -117,7 +121,8 @@ export class ProjectViewComponent implements OnInit {
                         break;
                       case 'transparencia':
                         this.changeLink = 'https://www.change.org/leydelobby'
-                        this.propuestasResumen = 'Causas Comunes junto a <a target="_blank" rel="noopener noreferrer" href="https://directoriolegislativo.org/">Directorio Legislativo</a> y más organizaciones estamos desarrollando <a target="_blank" rel="noopener noreferrer" href="https://propuestas.causascomunes.org/articulado?id=5d78f015ee136700188ea5bc">un proyecto de ley</a>, para presentar en el Congreso, que incluye los siguientes puntos:'
+                        this.propuestaLink = 'https://propuestas.causascomunes.org/articulado?id=5d78f015ee136700188ea5bc'
+                        this.propuestasResumen = 'Causas Comunes junto a <a target="_blank" rel="noopener noreferrer" href="https://directoriolegislativo.org/">Directorio Legislativo</a> y más organizaciones estamos desarrollando <strong><a target="_blank" rel="noopener noreferrer" href="https://propuestas.causascomunes.org/articulado?id=5d78f015ee136700188ea5bc">un proyecto de ley</a></strong>, para presentar en el Congreso, que incluye los siguientes puntos:'
                         this.propuestas = [
                           ["Transparencia en organismos públicos", "El objetivo primordial del proyecto es asegurar que las decisiones públicas se tomen de la forma más abierta posible."],
                           ["Registros digitales y de acceso público", "Los registros son actualizados una vez al mes, deben estar en formatos digitales de datos abiertos."],
@@ -128,7 +133,8 @@ export class ProjectViewComponent implements OnInit {
                         break;
                       case 'ambiente':
                         this.changeLink = 'https://www.change.org/agrotoxicos'
-                        this.propuestasResumen = 'Causas Comunes junto a distintxs activistas estamos desarrollando <a target="_blank" rel="noopener noreferrer" href="https://propuestas.causascomunes.org/articulado?id=5d7a9b68ee136700188ea5c2">un proyecto de ley</a> basado en uno del Senador Pino Solanas para presentar en el Congreso que incluye los siguientes puntos:'
+                        this.propuestaLink = 'https://propuestas.causascomunes.org/articulado?id=5d7a9b68ee136700188ea5c2'
+                        this.propuestasResumen = 'Causas Comunes junto a distintxs activistas estamos desarrollando <strong><a target="_blank" rel="noopener noreferrer" href="https://propuestas.causascomunes.org/articulado?id=5d7a9b68ee136700188ea5c2">un proyecto de ley</a></strong> basado en uno del Senador Pino Solanas para presentar en el Congreso que incluye los siguientes puntos:'
                         this.propuestas = [
                           ["Áreas de protección ambiental", "Se prohíbe la aplicación de agroquímicos en áreas urbanas y a menos 1.500 metros de viviendas permanentes y escuelas rurales, entre otras formas de asentamientos humanos, y, también, de criaderos de animales, ríos, arroyos, lagunas, embalses, diques y pozos de agua."],
                           ["Delito ambiental", "La aplicación de agroquímicos dentro de las áreas de protección se tipifica como “daño ambiental” y su responsabilidad no sólo le cabe a quien lo aplica sino también a los productores o propietarios del suelo y a las autoridades políticas, si es que no se muestran diligentes a la hora de evitar que se viole esta ley."],
@@ -139,7 +145,8 @@ export class ProjectViewComponent implements OnInit {
                         break;
                       case 'genero':
                         this.changeLink = 'http://www.change.org/menstruarsiniva'
-                        this.propuestasResumen = 'Causas Comunes junto a <a target="_blank" rel="noopener noreferrer" href="https://economiafeminita.com/">Economía Feminista</a> y más activistas estamos desarrollando <a target="_blank" rel="noopener noreferrer" href="https://propuestas.causascomunes.org/articulado?id=5d7a9c23ee136700188ea5c6">un proyecto de ley</a>, para presentar en el Congreso, que incluye los siguientes puntos:'
+                        this.propuestaLink = 'https://propuestas.causascomunes.org/articulado?id=5d7a9c23ee136700188ea5c6'
+                        this.propuestasResumen = 'Causas Comunes junto a <a target="_blank" rel="noopener noreferrer" href="https://economiafeminita.com/">Economía Feminista</a> y más activistas estamos desarrollando <strong><a target="_blank" rel="noopener noreferrer" href="https://propuestas.causascomunes.org/articulado?id=5d7a9c23ee136700188ea5c6">un proyecto de ley</a></strong>, para presentar en el Congreso, que incluye los siguientes puntos:'
                         this.propuestas = [
                           ["Eliminación del iva a elementos para la gestión menstrual", "Se exime del pago de iva a toallas higiénicas, tampones, paños absorbentes lavables, esponjas marinas, copas menstruales, ropa interior absorbente y otros métodos que pudieran inventarse en el futuro."],
                           ["Provisión gratuita", "De elementos para la gestión menstrual a niñas, adolescentes y personas que menstruen (entre la menarca y el climaterio) en escuelas, hospitales, cárceles y en paradores con gente en situación de calle."],

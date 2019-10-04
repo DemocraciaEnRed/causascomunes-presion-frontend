@@ -17,6 +17,12 @@
     </ng-template>
     </div>
   
+    <div class="row text-center {{ propuestaLink ? '' : 'd-none' }}">
+      <div class="col mt-4 mb-3">
+        <a target="_blank" rel="noopener noreferrer" href="{{propuestaLink}}"><button type="button" class="btn btn-primary btn-aec btn-lg">Leé más de este proyecto</button></a>
+      </div>
+    </div>
+  
     <div class="row text-center {{ changeLink ? '' : 'd-none' }}">
       <div class="firmar-change col mt-4 mb-3">
         <span>Podés apoyar esta propuesta, firmando en Change.org</span>
