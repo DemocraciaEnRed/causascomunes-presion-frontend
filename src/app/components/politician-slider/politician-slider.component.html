@@ -4,10 +4,12 @@
     </ng-template>
 </slider>
 
-<div class="container">
-    <div class="row full-list-strip">
-        <div class="col-12">
-            <button type="button" class="btn btn-primary btn-aec btn-lg" [routerLink]="['/lista', project.slug]">Ver listado completo de candidatxs&emsp;<small><i class="fas fa-chevron-right"></i></small></button>
-        </div>
-    </div>
-</div>
+<ng-template [ngIf]="politiciansList.length>6">
+  <div class="container">
+      <div class="row full-list-strip">
+          <div class="col-12">
+              <button type="button" class="btn btn-primary btn-aec btn-lg" [routerLink]="['/lista', project.slug]">Ver listado completo de candidatxs&emsp;<small><i class="fas fa-chevron-right"></i></small></button>
+          </div>
+      </div>
+  </div>
+</ng-template>
