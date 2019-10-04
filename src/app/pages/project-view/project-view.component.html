@@ -15,14 +15,15 @@
   <!-- Politicxs -->
   <politician-slider [politiciansList]="politiciansListSlider" [project]="currentProject"></politician-slider>
 </div>
-
 <div [hidden]="currentProject.show_tally == 0" class="w-100 separador"></div>
 
 <div class="mb-5 mb-md-0 w-100 separador"></div>
 
-<div class="w-100 bg-blanco">  
-  <propuesta-slider [propuestasResumen]="propuestasResumen" [propuestas]="propuestas" [changeLink]="changeLink"></propuesta-slider>
-</div>
+<ng-template [ngIf]="propuestasResumen">
+  <div class="w-100 bg-blanco">  
+    <propuesta-slider [propuestasResumen]="propuestasResumen" [propuestas]="propuestas" [changeLink]="changeLink"></propuesta-slider>
+  </div>
+</ng-template>
 
 <!-- Contador -->
 <tally [ammount]="currentProject.tally"></tally>
