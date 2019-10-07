@@ -22,6 +22,7 @@ export class Project {
     public secondary_color = '#44235a';
     public stances = new Array<Stance>();
     public videos = new Array<Video>();
+    public es_debate: boolean;
 
     public static asignProps(p1: Project, p2: Project) {
         p1.id = p2.id;
@@ -43,6 +44,9 @@ export class Project {
         p1.secondary_color = p2.secondary_color;
         p1.stances = p2.stances as Array<Stance>;
         p1.videos = p2.videos as Array<Video>;
+      
+        let debatePrefijo = 'debate-'
+        p1.es_debate = p2.slug.substring(0, debatePrefijo.length) === debatePrefijo;
     }
 
     public asignProps(p: Project) {

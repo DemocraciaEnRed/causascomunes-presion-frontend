@@ -56,10 +56,9 @@ export class MainComponent {
                         .then(r => this.politiciansList = r.slice(0, 20).sort(function() {return .5 - Math.random(); }) );
                 }
           
-                let debatePrefijo = 'debate-'
                 let rProjectList = []
                 response.forEach(function(project) {
-                    if (project.slug.substring(0, debatePrefijo.length) !== debatePrefijo)
+                    if (!project.es_debate)
                       rProjectList.push(project)
                 });
                 this.projectList = rProjectList;

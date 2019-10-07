@@ -28,10 +28,9 @@ export class AppComponent {
     this.projectService
         .getAll()
         .then(response => {
-            let debatePrefijo = 'debate-'
             let rProjectList = []
             response.forEach(function(project) {
-                if (project.slug.substring(0, debatePrefijo.length) !== debatePrefijo)
+                if (!project.es_debate)
                   rProjectList.push(project)
             });
             this.projectList = rProjectList;
