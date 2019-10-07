@@ -84,6 +84,8 @@ export class PoliticianCardComponent implements OnInit {
     public getRandomMessage(): string {
         let stanceTweets: Array<any>;
         stanceTweets = this._project.stances.filter(stance => stance.id === this.stance_id);
+        if (!stanceTweets.length)
+          stanceTweets = this._project.stances.filter(stance => stance.name === 'NoConfirmado');
         let length = stanceTweets.length;
         if (length > 0) {
             stanceTweets = stanceTweets[0].tweets;
