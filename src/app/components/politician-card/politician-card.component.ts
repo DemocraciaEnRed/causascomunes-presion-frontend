@@ -16,6 +16,9 @@ export class PoliticianCardComponent implements OnInit {
     @Input() set project(value: Project) {
         this._project = value;
         if (this._project.name) {
+            //si la stance nunca se definió en el backend el forEach de abajo nunca llega y queda vacía
+            this.stance = 'NoConfirmado';
+            this.stance_postura = 'No confirmado';
             this.politician.stances.forEach(stance => {
                 if (stance.project_id === this._project.id) {
                     this.stance = stance.name;
@@ -32,6 +35,7 @@ export class PoliticianCardComponent implements OnInit {
                       case 'SeAbstiene':
                       case 'NoConfirmado':
                       case 'SinDefinir':
+                      default:
                         postura = 'No confirmado';
                         break;
                     }
