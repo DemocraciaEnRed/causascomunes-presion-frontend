@@ -3,7 +3,9 @@
         <img [src]="imgUrl" class="card-img-top" alt="{{politician.first_name + ' ' + politician.last_name || '...'}}">
     </div>
     <div class="card-body {{stance}}">
-        <span class="postura px-4 py-1">{{stance_postura}}</span>
+      <ng-template [ngIf]="!_project.es_debate">
+          <span class="postura px-4 py-1">{{stance_postura}}</span>
+      </ng-template>
         <span class="title mt-2">{{politician.first_name}} {{politician.last_name}}</span>
         <span class="subtitle">{{politician.position && politician.position.name}}</span>
         <span class="subtitle">{{politician.party.name}}</span>
