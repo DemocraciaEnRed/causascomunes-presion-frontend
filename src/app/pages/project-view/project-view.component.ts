@@ -64,7 +64,7 @@ export class ProjectViewComponent implements OnInit {
                         $('#project-styles').html(text).data('project', p.name);
                     }*/
                     $('#newsletter_project').val(p.name).trigger('input').trigger('change');
-                    this.projectDescription = this.sanitizeHtml(p.slider_text);
+                    this.projectDescription = this.sanitizeHtml(p.slider_text.replace(/(http.*)[ .]/, '<a href="$1" target="_blank" rel="noopener noreferrer">LINK</a> '));
                     this.politicianService
                         .getAllByProject(p.slug, true)
                         .then(response => {
