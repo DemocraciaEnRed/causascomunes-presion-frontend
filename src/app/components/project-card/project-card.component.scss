@@ -26,6 +26,11 @@
           background-size: 200px;
           border-radius: 20px 0px 0px 20px;
         }
+        &.debate {
+          background-position: center;
+          background-size: cover;
+          min-height: 300px;
+        }
         .project-title {
             position: relative;
             text-align: left;
