@@ -58,6 +58,10 @@ export class MainComponent {
           
                 let rProjectList = []
                 response.forEach(function(project) {
+                    if (project.es_debate)
+                      rProjectList.push(project)
+                });
+                response.forEach(function(project) {
                     if (!project.es_debate)
                       rProjectList.push(project)
                 });
