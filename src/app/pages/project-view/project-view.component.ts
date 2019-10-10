@@ -69,7 +69,13 @@ export class ProjectViewComponent implements OnInit {
                         .getAllByProject(p.slug, true)
                         .then(response => {
                             this.politiciansList = response;
-                            this.politiciansListSlider = response.slice(0, 20).sort(function() {return .5 - Math.random(); });
+                            var rPoliticiansListSlider = [];
+                            response.forEach(function(politician) {
+                                if (politician.position.name == 'Jefe de Gobierno')
+                                  rPoliticiansListSlider.push(politician)
+                            });
+                            this.politiciansListSlider = rPoliticiansListSlider;
+                            //this.politiciansListSlider = response.slice(0, 20).sort(function() {return .5 - Math.random(); });
                         });
                     const element = document.querySelector('#activa');
                     element.scrollIntoView();
