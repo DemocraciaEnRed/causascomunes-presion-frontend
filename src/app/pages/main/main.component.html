@@ -1,4 +1,4 @@
-<div class="bg-mosaico-blanco pt-4">
+<div class="bg-mosaico-blanco pt-4">  
 <ng-template [ngIf]="highlightedProjectExists">
     <!-- Título y descripcion-->
     <div class="container">
@@ -10,6 +10,15 @@
                 </div>
             </div>
         </div>
+    </div>
+  
+    <div class="text-center mt-2">
+      <ng-template [ngIf]="!isMobileView">
+          <iframe width="764" height="430" src="https://www.youtube.com/embed/BuHomqDAk8w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </ng-template>
+      <ng-template [ngIf]="isMobileView">
+          <iframe width="310" height="160" src="http://www.youtube.com/embed/BuHomqDAk8w?controls=0&showinfo=0&showsearch=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </ng-template>
     </div>
 
     <politician-slider [politiciansList]="politiciansList" [project]="highlightedProject"></politician-slider>
