@@ -21,6 +21,7 @@ export class MainComponent {
     public politiciansList: Array<Politician>;
     public projectDescription: SafeHtml;
     public isMobileView: Boolean;
+    public isIOS: Boolean;
     public slider: Flickity;
 
     public sanitizeHtml(html: string): any {
@@ -84,6 +85,8 @@ export class MainComponent {
         } else {
             this.isMobileView = false;
         }
+      
+        this.isIOS = /(iPad|iPhone|iPod)/g.test(navigator.userAgent);
     }
 
     initializeCarousel() {
