@@ -71,7 +71,7 @@ export class ProjectViewComponent implements OnInit {
                             this.politiciansList = response;
                             var rPoliticiansListSlider = [];
                             response.forEach(function(politician) {
-                                if (politician.position.name == 'Presidentes')
+                                if (politician.position.name == 'Presidente')
                                   rPoliticiansListSlider.push(politician)
                             });
                             this.politiciansListSlider = rPoliticiansListSlider;
