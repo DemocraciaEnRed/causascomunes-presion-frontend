@@ -14,17 +14,16 @@
   
     <div class="text-center mt-3 px-4">
       <ng-template [ngIf]="!isMobileView">
-          <iframe width="764" height="430" src="https://www.youtube.com/embed/FlDoiyFUz4Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="764" height="430" src="https://www.youtube.com/embed/ZPR8ih2LmCw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </ng-template>
       <ng-template [ngIf]="isMobileView">
         <ng-template [ngIf]="!isIOS">
-          <iframe width="310" height="160" id="player" class="youtube-player" type="text/html" src="http://www.youtube.com/embed/FlDoiyFUz4Q?controls=0&showinfo=0&showsearch=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="310" height="160" id="player" class="youtube-player" type="text/html" src="http://www.youtube.com/embed/ZPR8ih2LmCw?controls=0&showinfo=0&showsearch=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </ng-template>
         <ng-template [ngIf]="isIOS">
-          <a href="http://www.youtube.com/watch?v=FlDoiyFUz4Q">
-            Debate de candidatos a Jefe de Gobierno<br>
-            de Buenos Aires
-            <img class="d-block mx-auto mt-1" src="http://img.youtube.com/vi/FlDoiyFUz4Q/0.jpg" border="0" width="310" height="160" alt="Debate de candidatos a Jefe de Gobierno de Buenos Aires" />
+          <a href="http://www.youtube.com/watch?v=ZPR8ih2LmCw">
+            Primer Debate Presidencial<br>
+            <img class="d-block mx-auto mt-1" src="http://img.youtube.com/vi/ZPR8ih2LmCw/0.jpg" border="0" width="310" height="160" alt="Debate de candidatos a Jefe de Gobierno de Buenos Aires" />
             YouTube Video
           </a>
         </ng-template>
