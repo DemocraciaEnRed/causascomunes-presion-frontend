@@ -16,6 +16,7 @@ export class ProjectCardComponent implements OnInit {
     //agregados por nosotres
     public bgColor: string;
     public causa: string;
+    public centerImg: Boolean;
 
     public constructor(public sanitizer: DomSanitizer) {
     }
@@ -34,6 +35,9 @@ export class ProjectCardComponent implements OnInit {
         this.backgroundImage = this.sanitizeStyle(backgroundAux);
         //this.projectDescription = this.sanitizeHtml(this.project.short_text);
         this.projectDescription = this.project.short_text;
+      
+        let amnestyPrefijo = 'amnesty-'
+        this.centerImg = this.project.es_debate || this.project.slug.substring(0, amnestyPrefijo.length) === amnestyPrefijo;
       
         let bgCol='';
         let causa='';
