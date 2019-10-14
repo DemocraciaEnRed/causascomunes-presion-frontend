@@ -60,7 +60,7 @@ export class MainComponent {
                 let rProjectList = []
                 let amnestyPrefijo = 'amnesty-';
                 response.forEach(function(project) {
-                    if (project.es_debate /*|| project.slug.substring(0, amnestyPrefijo.length) === amnestyPrefijo*/)
+                    if (project.slug == 'debate-presidencial' /*|| project.slug.substring(0, amnestyPrefijo.length) === amnestyPrefijo*/)
                       rProjectList.push(project)
                 });
                 response.forEach(function(project) {
