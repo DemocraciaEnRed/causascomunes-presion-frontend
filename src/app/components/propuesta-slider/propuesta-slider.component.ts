@@ -11,6 +11,7 @@ export class PropuestaSliderComponent implements OnInit {
     @Input() propuestasResumen: String;
     @Input() propuestas: Array<Array<String>>;
     @Input() changeLink: String;
+    @Input() changeText: String;
     @Input() propuestaLink: String;
 
     constructor() {

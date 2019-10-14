@@ -21,6 +21,7 @@ export class ProjectViewComponent implements OnInit {
   
     public propuestasResumen: String;
     public propuestas: Array<Array<String>>;
+    public changeText: String;
     public changeLink: String;
     public propuestaLink: String;
 
@@ -80,7 +81,13 @@ export class ProjectViewComponent implements OnInit {
                     const element = document.querySelector('#activa');
                     element.scrollIntoView();
 
+                    this.changeText = 'Podés apoyar esta propuesta, firmando en Change.org';
+
                     switch(p.slug.toLowerCase()){ 
+                      case 'amnesty-asij-dej':
+                        this.changeText = 'Podés apoyar esta propuesta, firmando en Amnistia.org.ar'
+                        this.changeLink = 'https://amnistia.org.ar/derechosenjuego/petitorio'
+                        break;
                       case 'vivienda':
                         this.changeLink = 'https://www.change.org/alquileresmasjustos'
                         this.propuestaLink = 'https://propuestas.causascomunes.org/articulado?id=5d7a9a8aee136700188ea5be'
