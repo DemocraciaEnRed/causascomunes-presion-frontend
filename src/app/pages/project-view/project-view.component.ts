@@ -84,7 +84,7 @@ export class ProjectViewComponent implements OnInit {
                     this.changeText = 'Podés apoyar esta propuesta, firmando en Change.org';
 
                     switch(p.slug.toLowerCase()){ 
-                      case 'amnesty-asij-dej':
+                      case 'amnistia-acij-dej':
                         this.changeText = 'Podés apoyar esta propuesta, firmando en Amnistia.org.ar'
                         this.changeLink = 'https://amnistia.org.ar/derechosenjuego/petitorio'
                         break;

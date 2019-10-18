@@ -36,7 +36,7 @@ export class ProjectCardComponent implements OnInit {
         //this.projectDescription = this.sanitizeHtml(this.project.short_text);
         this.projectDescription = this.project.short_text;
       
-        let amnestyPrefijo = 'amnesty-'
+        let amnestyPrefijo = 'amnistia-'
         this.centerImg = this.project.es_debate || this.project.slug.substring(0, amnestyPrefijo.length) === amnestyPrefijo;
       
         let bgCol='';
