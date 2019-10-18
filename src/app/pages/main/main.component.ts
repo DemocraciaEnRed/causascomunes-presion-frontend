@@ -58,7 +58,7 @@ export class MainComponent {
                 }
           
                 let rProjectList = []
-                let amnestyPrefijo = 'amnistia-';
+                let amnestyPrefijo = 'derechos-en-';
                 response.forEach(function(project) {
                     if (project.slug == 'debate-presidencial' || project.slug.substring(0, amnestyPrefijo.length) === amnestyPrefijo)
                       rProjectList.push(project)

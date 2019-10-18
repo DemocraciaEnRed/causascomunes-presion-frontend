@@ -29,7 +29,7 @@ export class AppComponent {
         .getAll()
         .then(response => {
             let rProjectList = []
-            let amnestyPrefijo = 'amnistia-'
+            let amnestyPrefijo = 'derechos-en-'
             response.forEach(function(project) {
                 if (!project.es_debate && project.slug.substring(0, amnestyPrefijo.length) !== amnestyPrefijo)
                   rProjectList.push(project)
