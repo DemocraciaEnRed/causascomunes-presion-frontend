@@ -13,7 +13,7 @@
       <ng-template ngFor let-propuesta [ngForOf]="propuestas">
         <div class="propuesta col-6 mb-4">
           <h1>{{propuesta[0]}}</h1>
-          <span>{{propuesta[1]}}</span>
+          <div class="{{ punteoHasLi ? 'has-li' : '' }}" [innerHTML]="propuesta[1]"></div>
         </div>
       </ng-template>
       </div>
@@ -22,7 +22,7 @@
     <ng-template [ngIf]="propuestaLink">
       <div class="row text-center">
         <div class="col mt-4 mb-3">
-          <a target="_blank" rel="noopener noreferrer" href="{{propuestaLink}}"><button type="button" class="btn btn-primary btn-aec btn-lg">Leé más de este proyecto</button></a>
+          <a target="_blank" rel="noopener noreferrer" href="{{propuestaLink}}"><button type="button" class="btn btn-primary btn-aec btn-lg">{{propuestaLinkBtnTxt}}</button></a>
         </div>
       </div>
     </ng-template>
@@ -43,7 +43,7 @@
       </div>
     </ng-template>
 
-    <ng-template [ngIf]="buttonLink">
+    <ng-template [ngIf]="buttonLink && showChange || showAmnistia">
       <div class="row text-center btn-firmar-row">
         <a target="_blank" rel="noopener noreferrer" href="{{buttonLink}}"><button class="btn btn-{{ showChange ? 'change' : 'amnistia' }} mb-5 mb-md-0">¡Firmá acá!</button></a>
       </div>

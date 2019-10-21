@@ -12,10 +12,13 @@ export class PropuestaSliderComponent implements OnInit, OnChanges {
     public propuestas: Array<Array<String>>;
     public propuestasResumen: String;
     public propuestaLink: String;
+    public propuestaLinkBtnTxt: String;
   
     public buttonLink: String;
     public showChange: Boolean;
     public showAmnistia: Boolean;
+  
+    public punteoHasLi: Boolean;
 
     constructor() {
         // COMPONENTE INCLUÍDO EN:
@@ -28,11 +31,27 @@ export class PropuestaSliderComponent implements OnInit, OnChanges {
         
         this.showChange = false;
         this.showAmnistia = false;
+        this.punteoHasLi=false;
+        this.propuestaLinkBtnTxt='Leé más de este proyecto'
 
         switch(this.project.slug.toLowerCase()){ 
           case 'derechos-en-juego':
             this.showAmnistia = true;
             this.buttonLink = 'https://amnistia.org.ar/derechosenjuego/petitorio'
+            break;
+          case 'acuerdo-social-anticorrupcion':
+            this.punteoHasLi = true;
+            this.propuestaLinkBtnTxt='Leé el acuerdo completo'
+            this.propuestaLink = 'https://acuerdoanticorrupcion.org/wp-content/uploads/2019/10/ASA-Versi%C3%B3n-abreviada-16-10-2.pdf'
+            this.propuestasResumen = 'El Acuerdo Social Anticorrupción es convocado por <a target="_blank" rel="noopener noreferrer" href="acij.org.ar">ACIJ</a>, <a target="_blank" rel="noopener noreferrer" href="cipce.org.ar">CIPCE</a>, <a target="_blank" rel="noopener noreferrer" href="directoriolegislativo.org">Directorio Legislativo</a> y <a target="_blank" rel="noopener noreferrer" href="poderciudadano.org">Poder Ciudadano</a> junto a un amplio de organizaciones de la sociedad civil y especialistas, y contiene los siguientes apartados:'
+            this.propuestas = [
+              ["Un nuevo sistema nacional de integridad que incluya", "<li>Una nueva Ley de Ética en la función pública</li><li>Ingreso democrático a la función pública</li>"],
+              ["La sanción de la corrupción pública y privada que incluya", "<li>La sanción de la corrupción a partir de una visión integral del fenómeno</li><li>Reformas procesales para la investigación de la corrupción.</li>"],
+              ["Medidas para la prevención de la corrupción en situaciones típicamente críticas que incluyan", "<li>Un nuevo régimen de compras y contrataciones públicas</li><li>La prevención de desviaciones en el uso de recursos públicos para fines político-partidarios</li><li>Financiamiento de la política</li>"],
+              ["Políticas de transparencia que incluyan", "<li>Acceso a la información pública</li><li>Transparencia presupuestaria y fiscal</li><li>Transparencia de los mercados financieros y control de la corrupción en el sector privado</li>"],
+              ["Medidas para el Fortalecimiento institucional que incluyan", "<li>Independencia y eficacia del Poder Judicial</li><li>Fortalecimiento del rol de los Ministerios Públicos</li><li>Mejorar la eficacia los organismos de control </li><li>Reforma del sistema de inteligencia nacional</li>"],
+              ["Estimular procesos de participación ciudadana que incluyan", "<li>Participación ciudadana en la prevención, investigación y sanción de la corrupción</li><li>Promover nuevos modelos de capacitación e investigación sobre la corrupción desde una perspectiva basada en la igualdad, la justicia y la democracia</li>"],
+            ]
             break;
           case 'vivienda':
             this.showChange = true;
@@ -120,8 +139,14 @@ export class PropuestaSliderComponent implements OnInit, OnChanges {
               ["Disposición de los desechos", "Los establecimientos públicos deberán contar con instalaciones sanitarias acordes y con protocolos de disposición de los desechos."],
             ];
             break;
+        }//endswitch
+        
+        console.log(this.propuestas.length, this.propuestas[0][1])
+        if (true || this.propuestas.length && this.propuestas[0][1].indexOf('<li>') != -1){
+          for (var i = 0; i<this.propuestas.length; i++)
+            this.propuestas[i][1] = this.propuestas[i][1].replace('<li>', '<li class="punteo-li">')
         }
-      }
+      }//endif
     }
   
     public ngOnInit(): void {

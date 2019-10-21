@@ -21,6 +21,10 @@ span {
     @include font-size-media-medium(17px, 19px);
 }
 
+.propuesta{
+  .has-li{ padding-left: 17px; }
+}
+
 .firmar-change{
   span{
     color: $change-red-color;
