@@ -27,15 +27,25 @@
       </div>
     </ng-template>
   
-    <ng-template [ngIf]="changeLink">
+    <ng-template [ngIf]="showChange">
       <div class="row text-center">
         <div class="firmar-change col mt-4 mb-3">
-          <span>{{changeText}}</span>
+          <span>Podés apoyar esta propuesta, firmando en Change.org</span>
         </div>
       </div>
-
+    </ng-template>
+  
+    <ng-template [ngIf]="showAmnistia">
       <div class="row text-center">
-        <a target="_blank" rel="noopener noreferrer" href="{{changeLink}}"><button class="btn btn-change mb-5 mb-md-0">¡Firmá acá!</button></a>
+        <div class="firmar-change col mt-4 mb-3">
+          <span>Podés apoyar esta propuesta, firmando en Amnistia.org.ar</span>
+        </div>
+      </div>
+    </ng-template>
+
+    <ng-template [ngIf]="buttonLink">
+      <div class="row text-center">
+        <a target="_blank" rel="noopener noreferrer" href="{{buttonLink}}"><button class="btn btn-change mb-5 mb-md-0">¡Firmá acá!</button></a>
       </div>
     </ng-template>
   

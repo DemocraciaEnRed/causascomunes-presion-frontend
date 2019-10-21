@@ -21,7 +21,7 @@
 
 <ng-template [ngIf]="!currentProject.es_debate">
   <div class="w-100 bg-blanco">  
-    <propuesta-slider [propuestasResumen]="propuestasResumen" [propuestas]="propuestas" [changeLink]="changeLink" [changeText]="changeText" [propuestaLink]="propuestaLink"></propuesta-slider>
+    <propuesta-slider [project]="currentProject"></propuesta-slider>
   </div>
 </ng-template>
 
