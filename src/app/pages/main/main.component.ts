@@ -60,7 +60,7 @@ export class MainComponent {
                 let rProjectListFirst = [];
                 let rProjectCausas = [];
                 let firstToShow = ['debate-presidencial', 'derechos-en-juego', 'acuerdo-social-anticorrupcion'];
-                let dontShow = ['acuerdo-social-anticorrupcion'];
+                let dontShow = ['debate-presidencial', 'acuerdo-social-anticorrupcion'];
                 
                 response.forEach(function(project) {
                     if (dontShow.indexOf(project.slug) != -1)
