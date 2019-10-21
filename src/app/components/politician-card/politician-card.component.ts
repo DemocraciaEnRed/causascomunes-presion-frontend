@@ -63,12 +63,12 @@ export class PoliticianCardComponent implements OnInit {
 
     public openTwitterWindow(): void {
         this.tallyUp();
-        const randomTweet = this.getRandomMessage().replace('@', '@' + this.politician.twitter);
+        const randomTweet = this.getRandomMessage().replace(/@([^a-zA-Z])/, '@' + this.politician.twitter + '$1');
         window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(randomTweet), '_blank');
     }
 
     public generateRandomMessage(): void {
-        this.randomMessage = this.getRandomMessage().replace('@', this.politician.first_name + ' ' + this.politician.last_name);
+        this.randomMessage = this.getRandomMessage().replace(/@([^a-zA-Z])/, this.politician.first_name + ' ' + this.politician.last_name + '$1');
     }
 
     public openFacebookWindow(): void {
