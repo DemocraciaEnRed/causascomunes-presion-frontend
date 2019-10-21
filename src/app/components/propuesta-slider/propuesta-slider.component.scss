@@ -1,6 +1,7 @@
 @import '../../../theme/variables.scss';
 
 $change-red-color: #ec2c22;
+$amnistia-yellow-color: #ff0;
 
 h1 {
   @include font-size-media-medium(18px, 20px);
@@ -11,6 +12,15 @@ span {
   @include font-size-text();
 }
 
+.title {
+  @include font-size-tit();
+}
+
+.text {
+    color: $negro;
+    @include font-size-media-medium(17px, 19px);
+}
+
 .firmar-change{
   span{
     color: $change-red-color;
@@ -18,31 +28,36 @@ span {
   }
 }
 
-.change-org{
-  
-  .flyer{
-    max-height: 500px;
-  }
+.amnistia-img{
+  height: 70px;
+}
 
-  .title {
-    @include font-size-tit();
+.firmar-amnistia{
+  span{
+    color: $negro;
+    @include font-size-media-medium(18px, 20px);
   }
+}
 
-  .text {
-      color: $negro;
-      @include font-size-media-medium(17px, 19px);
-  }
-  
+.btn-firmar-row{
   a {
     margin: 0 auto;
     
-    .btn-change {
-      background: $change-red-color;
-      color: $blanco;
+    .btn {
       font-weight: bold;
       padding: 13px 60px;
       font-size: 20px;
       border-radius: 30px;
+    }
+    
+    .btn-change {
+      background: $change-red-color;
+      color: $blanco;
+    }
+    
+    .btn-amnistia {
+      background: $amnistia-yellow-color;
+      color: $negro;
     }
   }
 }

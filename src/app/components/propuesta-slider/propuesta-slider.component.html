@@ -37,18 +37,25 @@
   
     <ng-template [ngIf]="showAmnistia">
       <div class="row text-center">
-        <div class="firmar-change col mt-4 mb-3">
+        <div class="firmar-amnistia col-12 mt-4 mb-3">
           <span>Podés apoyar esta propuesta, firmando en Amnistia.org.ar</span>
         </div>
       </div>
     </ng-template>
 
     <ng-template [ngIf]="buttonLink">
-      <div class="row text-center">
-        <a target="_blank" rel="noopener noreferrer" href="{{buttonLink}}"><button class="btn btn-change mb-5 mb-md-0">¡Firmá acá!</button></a>
+      <div class="row text-center btn-firmar-row">
+        <a target="_blank" rel="noopener noreferrer" href="{{buttonLink}}"><button class="btn btn-{{ showChange ? 'change' : 'amnistia' }} mb-5 mb-md-0">¡Firmá acá!</button></a>
       </div>
     </ng-template>
   
+    <ng-template [ngIf]="showAmnistia">
+      <div class="row text-center mt-5">
+        <div class="col-12">
+          <a target="_blank" rel="noopener noreferrer" href="https://amnistia.org.ar/"><img class="amnistia-img d-block mx-auto" src="../../../assets/images/amnistia-logo.png"></a>
+        </div>
+      </div>
+    </ng-template>
 </div>
 
 <!--<div class="container">
