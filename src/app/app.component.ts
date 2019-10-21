@@ -29,10 +29,10 @@ export class AppComponent {
         .getAll()
         .then(response => {
             let rProjectList = []
-            let amnestyPrefijo = 'derechos-en-'
+            let excludeProjects = ['debate-presidencial', 'derechos-en-juego', 'acuerdo-social-anticorrupcion'];
             response.forEach(function(project) {
-                if (!project.es_debate && project.slug.substring(0, amnestyPrefijo.length) !== amnestyPrefijo)
-                  rProjectList.push(project)
+              if (excludeProjects.indexOf(project.slug) == -1)
+                rProjectList.push(project)
             });
             this.projectList = rProjectList;
         });

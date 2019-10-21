@@ -57,17 +57,20 @@ export class MainComponent {
                         .then(r => this.politiciansList = r.slice(0, 20).sort(function() {return .5 - Math.random(); }) );
                 }
           
-                let rProjectList = []
-                let amnestyPrefijo = 'derechos-en-';
+                let rProjectListFirst = [];
+                let rProjectCausas = [];
+                let firstToShow = ['debate-presidencial', 'derechos-en-juego', 'acuerdo-social-anticorrupcion'];
+                let dontShow = ['acuerdo-social-anticorrupcion'];
+                
                 response.forEach(function(project) {
-                    if (project.slug == 'debate-presidencial' || project.slug.substring(0, amnestyPrefijo.length) === amnestyPrefijo)
-                      rProjectList.push(project)
+                    if (dontShow.indexOf(project.slug) != -1)
+                      return;
+                    if (firstToShow.indexOf(project.slug) != -1)
+                      rProjectListFirst.push(project)
+                    else
+                      rProjectCausas.push(project)
                 });
-                response.forEach(function(project) {
-                    if (!project.es_debate && project.slug.substring(0, amnestyPrefijo.length) !== amnestyPrefijo)
-                      rProjectList.push(project)
-                });
-                this.projectList = rProjectList;
+                this.projectList = rProjectListFirst.concat(rProjectCausas);
           
                 if (this.isMobileView) {
                     this.initializeCarousel()
