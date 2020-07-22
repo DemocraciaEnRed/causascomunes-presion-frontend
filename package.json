@@ -2,8 +2,8 @@
     "name": "CausasComunesFrontend",
     "version": "2.0.0",
     "license": "MIT",
-    "api": "https://backend.activa.causascomunes.org/",
-    "imgBase": "https://backend.activa.causascomunes.org/",
+    "api": "http://localhost:7000/",
+    "imgBase": "http://localhost:7000/",
     "production": false,
     "scripts": {
         "ng": "ng",
