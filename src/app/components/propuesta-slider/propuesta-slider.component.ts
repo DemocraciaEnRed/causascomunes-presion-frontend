@@ -8,33 +8,33 @@ import { Project } from '../../model/project';
 })
 export class PropuestaSliderComponent implements OnInit, OnChanges {
     @Input() project: Project;
-  
+
     public propuestas: Array<Array<String>>;
     public propuestasResumen: String;
     public propuestaLink: String;
     public propuestaLinkBtnTxt: String;
-  
+
     public buttonLink: String;
     public showChange: Boolean;
     public showAmnistia: Boolean;
-  
+
     public punteoHasLi: Boolean;
 
     constructor() {
         // COMPONENTE INCLUÍDO EN:
         // pages/project-view/project-view.component.ts
     }
-    
+
     ngOnChanges(changes: SimpleChanges) {
       if (changes.project){
         this.project = changes.project.currentValue
-        
+
         this.showChange = false;
         this.showAmnistia = false;
         this.punteoHasLi=false;
         this.propuestaLinkBtnTxt='Leé más de este proyecto'
 
-        switch(this.project.slug.toLowerCase()){ 
+        switch(this.project.slug.toLowerCase()){
           case 'derechos-en-juego':
             this.showAmnistia = true;
             this.buttonLink = 'https://amnistia.org.ar/derechosenjuego/petitorio'
@@ -126,6 +126,7 @@ export class PropuestaSliderComponent implements OnInit, OnChanges {
             ];
             break;
           case 'genero':
+          default:
             this.showChange = true;
             this.buttonLink = 'http://www.change.org/menstruarsiniva'
             this.propuestaLink = 'https://propuestas.causascomunes.org/articulado?id=5d7a9c23ee136700188ea5c6'
@@ -140,7 +141,7 @@ export class PropuestaSliderComponent implements OnInit, OnChanges {
             ];
             break;
         }//endswitch
-        
+
         console.log(this.propuestas.length, this.propuestas[0][1])
         if (true || this.propuestas.length && this.propuestas[0][1].indexOf('<li>') != -1){
           for (var i = 0; i<this.propuestas.length; i++)
@@ -148,7 +149,7 @@ export class PropuestaSliderComponent implements OnInit, OnChanges {
         }
       }//endif
     }
-  
+
     public ngOnInit(): void {
     }
 
